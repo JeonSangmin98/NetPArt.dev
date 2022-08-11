@@ -1,0 +1,15 @@
+이클립스 단축
+
+
+^c + shift + o : 	자동 import
+^c + shift + f : 	줄 정리
+^c + shift + c :	주석
+^c + shift +  /  : 	블럭 주석
+^c + shift + \  : 	블록 주석 제거
+^c + /  :		여러줄 주석
+^c + space  : 	문장 자동 완성
+^c + d  : 		한 줄 삭제
+^c + w  : 		파일 닫기
+^c + F11 :	실행
+
+shift + alt + r : 단어 한번에 선택
