@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입</title>
+    <style>
+        .container{
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+        ul {
+            list-style-type: none;
+            padding: 10px 10px;
+            margin: 10px auto;
+        }
+        li{
+            margin: 20px;
+            margin-left: 5px;
+        }
+        li label{
+            width: 150px;
+            float: left;
+            font-weight: bold;
+        }
+        #menu1{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        input{
+            height: 2em;
+        }
+        select{
+            width: 100px;
+            height: 30px;
+        }
+        .signup{
+            text-align: center;
+        }
+        button{
+            font-size: 20px;
+            width: 150px;
+            padding: 10px 30px;
+            margin: 2px;
+        }
+        button:hover {
+            background-color: #64bbf5;
+            border: 1px solid #c6d880;
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>회원가입을 환영합니다</h1>
+        <fieldset id="menu1">
+            <legend>사용자 정보</legend>
+            <ul>
+                <li>
+                    <label for="id">아이디</label>
+                    <input type="text" size="50" id="id" placeholder="4자 ~ 10자 사이, 공백없이">
+                </li>
+                <li>
+                    <label for="email">이메일</label>
+                    <input type="text" size="50" id="email">
+                </li>
+                <li>
+                    <label for="pwd">비밀번호</label>
+                    <input type="text" size="50" id="pwd" placeholder="문자와 숫자, 특수 기호 포함">
+                </li>
+                <li>
+                    <label for="checkpwd">비밀번호 확인</label>
+                    <input type="text" size="50" id="checkpwd">
+                </li>
+                <li>
+                    <label for="root">가입 경로</label>
+                    <select name="" id="root">
+                        <option value="" selected>블로그</option>
+                        <option value="">검색</option>
+                        <option value="">SNS</option>
+                        <option value="">기타</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="memo">메모</label>
+                    <textarea name="" id="memo" cols="52" rows="5" placeholder="더 할 말이 있다면 여기에"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset id="menu2">
+            <legend>이벤트와 새로운 소식</legend>
+            <ul>
+                <input type="radio">메일 수신
+                <input type="radio" checked>메일 수신 안함
+            </ul>
+        </fieldset>
+        <div class="signup">
+            <button type="submit">가입하기</button>
+            <button type="reset">취소</button>
+        </div>
+    </div>
+</body>
+</html>

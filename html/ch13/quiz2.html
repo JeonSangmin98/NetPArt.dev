@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자</title>
+    <style>
+        a[title="hot1"]{
+            background-color: orange;
+            color: white;
+        }
+        a[title="hot2"]{
+            background-color: green;
+            color: white;
+        }
+        a[title="hot3"]{
+            background-color: rgb(190, 27, 114);
+            color: white;
+        }
+        a[title="hot4"]{
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>속성 선택자 사용하기</h1>
+        <hr>
+        <h2>조리학부 자격증</h2>
+        <ul id="list">
+            <li><a href="#">복어조리기능사</a></li>
+            <li><a href="#">조리기능사</a></li>
+            <li><a href="#">일식조리기능사</a></li>
+            <li><a href="#" title="hot1">제과기능장</a></li>
+            <li><a href="#" title="hot2">제과기능사</a></li>
+            <li><a href="#">제빵기능사</a></li>
+            <li><a href="#" title="hot1">조리기능장</a></li>
+            <li><a href="#" title="hot3">조리산업기사(복어조리)</a></li>
+            <li><a href="#" title="hot3">조리산업기사(양식)</a></li>
+            <li><a href="#" title="hot3">조리산업기사(일식)</a></li>
+            <li><a href="#" title="hot3">조리산업기사(중식)</a></li>
+            <li><a href="#" title="hot3">조리산업기사(한식)</a></li>
+            <li><a href="#" title="hot4">조주기능사</a></li>
+            <li><a href="#">중식조리기능사</a></li>
+            <li><a href="#">한식조리기능사</a></li>
+        </ul>
+    </div>
+</body>
+</html>

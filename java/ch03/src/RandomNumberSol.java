@@ -17,6 +17,6 @@ public class RandomNumberSol {
 		}
 		System.out.print("난수 " + n + "개의 합은 " + sum);
 		scan.close();
-	}
+	}	// end main
 
 }
