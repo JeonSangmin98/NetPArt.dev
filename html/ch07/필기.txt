@@ -1,0 +1,26 @@
+웹에서 색상 표현
+ - 16진수 표현
+    - #ffffff, #000000 등
+ - hsl / hsla 표기법
+    - 색상, 채도, 밝기의 양 순
+    - 알파 값은 불투명도 표현 (0~1 / 1:불투명, 0:투명)
+ - rgb / rgba 표기법
+    - 0~255
+    - 알파 값은 불투명도 표현 (0~1 / 1:불투명, 0:투명)
+ - 색상 이름 표기법
+
+background-image
+ - 배경 이미지 지정
+
+background-size
+ - 배경 이미지 크기 조절
+
+background-position
+ - 반복 안할 때 표시 위치 지정
+
+background-origin
+ - 배치 기준 설정
+ - padding-box, border-box. content-box
+
+background-attachment
+ - 

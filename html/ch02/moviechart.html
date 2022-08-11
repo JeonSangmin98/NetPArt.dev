@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표를 이용하여 TV영화 편성표를 만들어 보자</title>
+    <style>
+        th {
+            text-align: center;
+            background-color: darkorange;
+        }
+        th, td {
+            padding: 10px; /* 셀 테두리와 내용 사이의 여백 */
+        }
+        caption {
+            color: darkorange;
+        }
+        table {
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table border="i">
+        <colgroup>
+            <col style="width: 180px;">
+            <col style="width: 180px;">
+            <col style="width: 180px;">
+            <col style="width: 180px;">
+            <col style="width: 180px;">
+        </colgroup>
+        <caption><strong>2015년 12월 17일(월) TV편성표</strong></caption>
+        <tr>
+            <th style="height: 40px;"></th>
+            <th>OCN</th>
+            <th>SUPER ACTION</th>
+            <th>CH.CGV</th>
+            <th>XTM</th>
+        </tr>
+        <tr>
+            <th style="height: 80px;" >19시</th>
+            <td rowspan="2">의뢰인</td>
+            <td> CSI MIAMI 시즌2(11회)</td>
+            <td> 지구가 멈추는 날</td>
+            <td> Friends(20회)</td>
+        </tr>
+        <tr>
+            <th style="height: 50px;">20시</th>
+            <td> 미트더 스파르탄</td>
+            <td rowspan="3"> 공감랭크쇼</td>
+            <td> Friends(21회)</td>
+        </tr>
+        <tr>
+            <th style="height: 50px;">21시</th>
+            <td> CSI시즌2(12회)</td>
+            <td rowspan="3"> 스위드 피쉬</td>
+            <td> 가제트(81회)</td>
+        </tr>
+        <tr>
+            <th style="height: 50px;">22시</th>
+            <td> CSI시즌2(13회)</td>
+            <td> 가제트(82회)</td>
+        </tr>
+        <tr>
+            <th style="height: 50px;">23시</th>
+            <td> 더 록</td>
+            <td> 탑 기어</td>
+            <td> 가제트(83회)</td>
+        </tr>
+        <tr>
+            <td colspan="5" style="height: 50px; text-align: center; color: red;">일간단위로 업데이트 되며, 방송사 사정에 따라 변경될 수 있습니다.</td>
+        </tr>
+    </table>
+</body>
+</html>

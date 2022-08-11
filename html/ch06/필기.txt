@@ -1,0 +1,37 @@
+font-family
+- 글꼴
+- 텍스트 사용 요소에 사용
+- 두 번째, 세 번째 까지 지정
+- 쉼표로 구분
+
+@font-face : 웹 폰트
+
+font-size : 글자 크기 조정
+ - 기본값 : medium
+ - 절대크기, 상대크기, 크기, 백분율
+ - em,px
+ - px : 크기 고정 ( 작은화면에 작은 글씨 )
+ - em : 대문자 M을 기준, M의 너비를 1em
+
+font-weight 
+ - 400 기본값
+
+color
+ - 글자 색
+ - 16진수, rgb, hsl, 색상이름
+
+text-decoration
+ - 밑줄을 없앨때 사용
+
+text-shadow
+ - 그림자 효과 추가
+ - 가로길이 세로길이 번짐정도 색상
+
+line-height
+ - 글 간격
+
+list-style-type
+ - 불릿 없애기
+
+list-style-image
+ - 불릿 대신 이미지 사용

@@ -1,0 +1,56 @@
+float
+ - 요소를 왼쪽 or 오른쪽에 떠 있게 만듦
+   - clear
+      - float 무효화
+
+position
+ - 웹 문서 안에서 요소들을 배치하기 위한 속성
+ - static, relative, absolute, fixed
+ - static  
+    - 문서의 흐름대로
+ - relative
+    - 자연스럽게 배치
+    - 상대적인 위치
+    - 다른 요소에 바뀔 수 있음
+    - left, top 을 이용 요소 위치 옮기기 가능
+ - absolute
+    - 흐름과 상관없이 요소를 배치
+    - 기준은 가장 가까운 부모 요소
+    - left top right bottom 을 이용 하여 네 모서리에서 얼마나 떨어져 있는지
+ - fixed
+    - 문서 흐름과 상관없이 원하는 위치에 요소 배치
+    - 브라우저 창 기준 ( 창 왼쪽 위 꼭지점 : (0,0)기준으로 계산 )
+    - 스크롤 하더라도 같은 위치에 고정
+
+
+visibility
+ - 특정 요소를 화면에 보이거나 보이지 않게 하는 속성
+ - visibility: visible | hidden | collapse
+
+z-index
+ - 쌓는 순서 정함
+ - 값이 크면 작은것 보다 위에 쌓임
+ - 값을 명시하지 않으면 1부터 시작해서 1씩 커짐
+
+column-width
+ - 너비 고정 화면 분할
+ - 화면의 크기가 커지면 단의 개수가 많아짐
+ - column-width: <크기> | auto
+
+caption-side
+ - 표 위쪽에 표시
+
+border-spacing
+ - 인접한 셀 테두리 사이의 거리를 지정
+
+empty-cell
+ - 표에서 빈 셀의 테두리를 표시 하지 않음
+
+width
+ - 너비
+height
+ - 높이
+
+vertical-align
+ - 수직 정렬
+ - top : 기본값

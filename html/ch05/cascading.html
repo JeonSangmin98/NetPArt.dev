@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내부 스타일 시트</title>
+    <style>
+      p {
+        font-style: italic;
+        color: blue !important;  /* !important : 우선순위 높게 적용*/
+      }
+      p {
+        color: red;
+      }
+      #hobor {
+        color: green;
+      }
+      .heading {
+        color: red;
+      }
+      h1 {
+        color: blue;
+      }
+    </style>
+</head>
+<body>
+    <img src="images/sydney.png" alt="시드니 오페라하우스">
+    <h1 class="heading" id="hobor">세계 3대 미항</h1>
+
+    <p>시드니(Sydney), 호주</p>
+    <p>리우데자네이루(Rio de Janeiro), 브라질</p>
+    <p>나폴리(Naples), 이탈리아</p>
+    
+</body>
+</html>

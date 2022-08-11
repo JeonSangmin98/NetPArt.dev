@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATTRIBUT</title>
+    <style>
+        ul {
+            /* li 점 삭제 */
+            list-style: none;
+        }
+        li {
+            margin: 20px;
+        }
+        li label {
+            width: 150px;
+            float: left;
+        }
+        fieldset {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>여름 방학 특강 신청</h1>
+    <form action="">
+        <fieldset>
+            <legend>수강과목</legend>
+            <ul>
+                <li>
+                    <label for="subj">영어회화초급</label>
+                    <input type="text" id="subj" value="오전 9:00 ~ 10:00" readonly>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>신청자</legend>
+            <ul>
+                <li>
+                    <label for="uname">이름</label>
+                    <input type="text" id="uname" autofocus required>   <!-- required : 오류 표시 autofocus : 자동 커서-->
+                </li>
+                <li>
+                    <label for="uid">학번</label>
+                    <input type="text" id="uid" placeholder="하이픈 없이 입력" required maxlength="8">      <!-- placeholder : 힌트 -->
+                </li>
+                <li>
+                    <label for="uclass">학과</label>
+                    <select name="" id="uclass">
+                        <option value="">건축공학과</option>
+                        <option value="">기계공학과</option>
+                        <option value="">산업공학과</option>
+                        <option value="">전기전자공학과</option>
+                        <option value="" selected>컴퓨터공학과</option>
+                        <option value="">화확공학과</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>교재 주문</legend>
+            <ul>
+                <li>
+                    <label for="book">교재</label>
+                    <input type="number" id="book" value="1" min="1" max="3">
+                </li>
+                <li>
+                    <label for="workseet">워크시트</label>
+                    <input type="number" id="workseet" value="1" min="1" max="3">
+                </li>
+                <li>
+                    <label for="group">단체주문</label>
+                    <input type="number" id="group" value="10" min="10" max="100" step="10">
+                </li>
+                <li>
+                    <label for="comment">참고사항</label>
+                    <textarea name="" id="comment" cols="30" rows="3"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="신청하기">
+            <input type="reset" value="다시입력">
+        </fieldset>
+    </form>
+</body>
+</html>

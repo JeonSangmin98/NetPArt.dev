@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문서 정보</title>
+    <style>
+        .button {
+            text-align: center;
+        }
+        div {
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style: none;
+            line-height: 1.8em;
+        }
+        #size {
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>주문서 정보</h1>
+    <div>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" placeholder="공백없이 입력하세요." autofocus>
+                </li>
+                <li>
+                    <label for="email">메일주소</label>
+                    <input type="email" name="" id="email" placeholder="abcd@abcd.com">
+                </li>
+                <li>
+                    <label for="page">홈페이지(URL)</label>
+                    <input type="url" id="page" max="50" placeholder="공백없이 입력하세요">
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+    <div>
+        <fieldset>
+            <ul>
+                <li>
+                    <label for="search">상품 검색</label>
+                    <input type="text" id="search">
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+    <div>
+        <fieldset>
+            <legend>주문 정보</legend>
+            <ul>
+                <li>
+                    <label for="color">주문 색상</label>
+                    <input list="color-choice" id="color">
+                    <datalist id="color-choice">
+                        <option value="black">검정</option>
+                        <option value="gray">회색</option>
+                        <option value="olive">올리브</option>
+                        <option value="camel">카멜</option>
+                    </datalist>
+                </li>
+                <li>
+                    <label for="num">주문 개수</label>
+                    <input type="range" id="num" min="1" max="10" value="1">
+                </li>
+                <li>
+                    <label for="size">사이즈</label>
+                    <input type="number" id="size" value="85" min="85" max="100" step="5">
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+    <div>
+        <fieldset>
+            <ul>
+                <li>
+                    <label for="day">주문일</label>
+                    <input type="datetime-local" name="" id="day">
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+    <div class="button">
+        <fieldset>
+            <button type="submit">제출</button>
+            <button type="reset">초기화</button>
+        </fieldset>
+    </div>
+</body>
+</html>

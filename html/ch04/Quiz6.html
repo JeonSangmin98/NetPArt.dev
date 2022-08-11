@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세미나 정보</title>
+    <style>
+        ul {
+            /* li 점 삭제 */
+            list-style: none;
+        }
+        li {
+            margin: 20px;
+        }
+        li label {
+            width: 150px;
+            float: left;
+        }
+        fieldset {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form">
+        <fieldset>
+            <h4>세미나 정보</h4>
+            <ol>
+                <li>주제 : 차세대 웹 표준 기술 HTML</li>
+                <li>일정 : 5월 12일 14:00 ~ 17:00</li>
+                <li>장소 : 공학관 2층 세미나실</li>
+                <li>인원 : 선착순 100명</li>
+                <li>비용 : 본교 학생 무료 (외부 참가자 5000원)</li>
+                <li>참가신청 : 아래 양식에 빠짐없이 기입하여 주세요</li>
+            </ol>
+        </fieldset>
+        <h4>개인 정보</h4>
+        <ul>
+            <li>
+                <label for="name">이름</label>
+                <input type="text" id="name">
+            </li>
+            <li>
+                <label for="pwd">비밀번호</label>
+                <input type="password" id="pwd">(수정시 필요)
+            </li>
+        </ul>
+        <h4>참가 정보</h4>
+        <fieldset>
+            <legend>참가 유형 선택</legend>
+            <input type="radio">무료(교내참가자)
+            <input type="radio">유료(교외참가자)
+        </fieldset>
+        <fieldset>
+            <legend>관심 분야 선택</legend>
+            <input type="checkbox" name="" id="">HTML5 시멘틱
+            <input type="checkbox" name="" id="">CSS3
+            <input type="checkbox" name="" id="">Web Storage
+            <input type="checkbox" name="" id="">Web Soket
+            <input type="checkbox" name="" id="">Canvas
+            <input type="checkbox" name="" id="">Geolocation
+        </fieldset>
+        <h4>선택 사항</h4>
+        <ul>
+            <li>
+                <label for="job">직업</label>
+                <select name="" id="job">
+                    <option value="" selected>가까운 분야 선택</option>
+                    <option value="">학생</option>
+                    <option value="">웹개발</option>
+                    <option value="">웹디자인</option>
+                    <option value="">교육관련</option>
+                    <option value="">기타</option>
+                </select>
+            </li>
+            <li>
+                <label for="memo">남길 말씀</label>
+                <textarea name="" id="memo" cols="50" rows="20"></textarea>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

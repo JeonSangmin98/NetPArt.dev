@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여러 스타일 텍스트 적용하기</title>
+    <style>
+        body {
+            margin-left: 1.5em;
+        }
+        .container {
+            font-family: '궁서체';
+        }
+        .accent {
+            color: coral;
+            font-size: 1.3em;
+        }
+        img {
+            float: right;
+            margin-right: 5px;
+            width: 400px;
+            height: 200px;
+        }
+        .font1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2em;
+        }
+        .font2 {
+            font-style: italic;
+        }
+        .font3 {
+            font-family: sans-serif;
+            font-variant: small-caps;
+        }
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>2022을 마무리하며..</h1>
+        <p class="font1">올 한해 <span class="accent">큰 꿈</span>과 <span class="accent">소망</span>을 계획했던 대로
+            잘 마감하시는 한 달이 되길 바랍니다.
+        </p>
+    </div>
+    <div>
+        <p>벌써 한 해의 끝자락 12월 입니다. 유사유종이라는 말 처럼 연초 세운 모든일들을
+            알차게 마무리하시며 희망에 찬 새해 가득 안으시길 바랍니다.
+        </p>
+    </div>
+    <img src="images/sunset.jpg" alt="">
+    <h2>새해복 많이 받으세요</h2>
+    <h3 class="font3">GOOD BYE, 2022</h3>
+    <p class="font2">2022.12.31 홍길동 드림</p>
+</body>
+</html>

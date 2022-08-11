@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Maps</title>
+</head>
+<body>
+    <h2>Image Maps</h2>
+    <p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about  the topic:</p>
+    <img src="images/workplace.jpg" alt="" usemap="#favorites">
+    <map name="favorites">
+        <area shape="rect" coords="34,44,272,349" 
+        href="https://en.wikipedia.org/wiki/Computer" alt="Computer" target="_blank">
+        <area shape="rect" coords="289,173,336,246" 
+        href="https://en.wikipedia.org/wiki/Telephone" alt="Telephone" target="_blank">
+        <area shape="circle" coords="340,300,50" 
+        href="https://en.wikipedia.org/wiki/Coffee" alt="Coffee" target="_blank">
+    </map>
+</body>
+</html>
