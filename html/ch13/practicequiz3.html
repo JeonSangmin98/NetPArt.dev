@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 50px;
+            margin: 50px;
+        }
+        .container .photo{
+            width: 300px;
+            height: 200px;
+            transition: all;
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            -o-transition-duration: 1s;
+            transition-duration: 1s;
+        }
+        .container .photo:hover{
+            width: 450px;
+            height: 300px;
+            box-shadow: 5px 5px 3px 5px black;
+            -webkit-transform-origin: left top;
+            -moz-transform-origin: left top;
+            -o-transform-origin: left top;
+            transform-origin: left top;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/lamp.jpg" alt="" class="photo">
+    </div>
+</body>
+</html>

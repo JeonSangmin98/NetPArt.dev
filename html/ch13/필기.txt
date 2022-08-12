@@ -21,3 +21,22 @@
  - perspective
     - 원근감을 갖게 함.
     - 0보다 커야 하며 사용자로부터 멀어짐
+
+트랜지션
+   - 스타일 속성이 자연스럽게 바뀜
+   - transition-property
+      - 적용 속송 선택 
+   - transition-duration
+      - 진행 시간 지정
+   - transition-timing-function
+      - 시작과 중간 속도 조절
+
+CSS와 애니메이션
+   - 애니메이션 추가
+   - 시작해 끈내는 동안 스타일 바꿀 수 있음
+   - keyframes 사용
+      - 시작과 끝 상태가 바뀌는 지점 설정
+      - '이름'으로 애니메이션 구별
+      - 시작과 끝 위치만 사용 할때 from to 사용
+   - duration 반드지 지정
+      

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .text{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .text li{
+            position: relative;
+            float: left;
+            margin: 10px;
+            padding: 0;
+            overflow: hidden;
+        }
+        .text img{
+            margin: 0;
+            padding: 0;
+            z-index: 5;
+        }
+        .text .caption{
+            position: absolute;
+            top: 0;
+            right: -50%;
+            width: 300px;
+            height: 400px;
+            padding-left: 20px;
+            background: rgba(0, 0, 0, .6);
+            opacity: 0;
+            transition: all .2s ease-in-out;
+            z-index: 10;
+        }
+        .text li:hover .caption{
+            opacity: 1;
+            transform: translateX(-200px);
+        }
+        .text .caption p{
+            color: white;
+            padding-top: 320px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="text">
+            <li>
+                <img src="images/friends.jpg" alt="">
+                <div class="caption">
+                    <p>친구란,<br>
+                    두 몸에 깃든 하나의 영혼</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
