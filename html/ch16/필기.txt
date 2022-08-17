@@ -1,0 +1,33 @@
+플렉스 박스 레이아웃
+    - 너비나 높이 위치를 자유롭게 변형 할 수 있음
+
+    - display
+        - 플렉스 컨테이너로 지정
+        - display : flex | inline-flex
+        - 브라우저마다 지원 방법이 달라 접두사 붙여야됨
+
+    - flex-direction
+        - 항목 배치 방향 지정
+        - row 가로 column 세로
+    - flex-wrap
+        - 항목을 한 줄 또는 여러줄로 배치
+
+    - flex-flow
+        - 방향과 여러 줄 배치를 한꺼번에 지정
+    - order
+        - 항목의 배치 순서 바꾸기
+        - order 값에 지정된 순서에 따라 배치
+
+    - flex 속성
+        - 항목의 크기 조절
+        - flex-grow : 늘리기
+        - flex-shrink : 줄이기
+
+    -justify-content
+        - 주축방향으로 배치할 때의 배치 기준
+    
+    - align-items, align-self
+        - 교차축을 기준으로 하는 배치 방법
+
+    - align-content
+        - 여러줄로 표시 될때 교차 축 기준의 배치 방법
