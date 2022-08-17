@@ -12,4 +12,5 @@ public class Rectangle {
 	int perimeter() {
 		return 2*w+2*h;
 	}
+	
 }

@@ -12,5 +12,16 @@ public class StringTest {
 		System.out.println(s2);
 		System.out.println(s3);
 		System.out.println(s4);
+		
+		
+		String str = "20";
+		System.out.println(str + str);
+		int i = Integer.parseInt(str);
+		System.out.println(i + i);
+		
+		String str2 = "3.14";
+		System.out.println(str2 + str2);
+		double d = Double.parseDouble(str2);
+		System.out.println(d+d);
 	}
 }

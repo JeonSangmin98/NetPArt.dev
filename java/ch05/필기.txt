@@ -49,3 +49,11 @@ String 클래스
 	- String s = new String("Hello World");
 	- new String() 생략 가능
 	- 자바에서 문자열은 객체임
+
+문자열 결합
+	- '+' 연산자(결합연산자) 사용
+
+수치 값 -> 문자열
+	- 기초 자료형 변수를 문자열과 결합하면 자동으로 문자열로 변환
+문자열 -> 수치 값
+	- Integer 클래스 사용(Byte,Short,Long,Float,Double,Character,Boolean,Void)
