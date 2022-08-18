@@ -13,4 +13,18 @@ public class MyCounter {
 	public int getCounter() {
 		return counter;
 	}
+	
+	int inc(int a) {
+		a = a + 1;
+		return a;
+	}
+	void inc(MyCounter ctr) {
+		ctr.counter += 1;
+	}
+	
+	void inc(int[] arr) {
+		for(int i=0;i<arr.length;i++) {
+			arr[i] += 1;
+		}
+	}
 }

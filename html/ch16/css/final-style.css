@@ -1,0 +1,58 @@
+body{
+    background: url("../images/bg.png") no-repeat right bottom fixed #2c8cd1;
+    color: white;
+}
+#container{
+    width: 650px;
+    margin: 0 auto;
+}
+p{
+    width: 600px;
+    line-height: 25px;
+    padding: 10px;
+    margin: 20px;
+}
+li{
+    line-height: 25px;
+    margin: 20px;
+}
+.accent{
+    font-size: 30px;
+    color: #ffb836;
+}
+h2{
+    width: 600px;
+    font-size: 18px;
+    color: yellow;
+    padding: 5px;
+    margin: 30px;
+    border-top: 1px solid yellow;
+    border-bottom: 1px solid yellow;
+}
+h1{
+    width: 600px;
+    padding: 10px;
+    margin: 30px;
+    font-family: 'Times New Roman', Bold;
+    font-size: 45px;
+    text-shadow: 3px 3px 5px black;
+}
+.rotate{
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px 0px black;
+    float: left;
+    border-radius: 20px;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+}
+.rotate:hover{
+    transform: rotate(0deg);
+    border-radius: 20px;
+}
+.content1, .content2, .content3{
+    /* border: 1px solid black; */
+    width: 600px;
+}

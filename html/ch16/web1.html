@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("images/windmill.jpg") no-repeat center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+        #title{
+            color: white;
+            background: url("images/nav.png") no-repeat black;
+            background-position: right 10px center;
+        }
+        #title h3{
+            padding: 10px;
+        }
+        .menu{
+            background-color: rgb(30, 38, 87);
+        }
+        .menu li{
+            list-style: none;
+            display: block;
+            color: white;
+            text-align: center;
+            border-bottom: 0.5px solid gray;
+            padding: 15px;
+            margin-bottom: 2px;
+            font-weight: bold;
+        }
+        @media screen and (min-width:768px) {
+            #title h3{
+                display: none;
+            }
+            .menu{
+                width: 100%;
+                margin: 0 auto;
+            }
+            .menu ul{
+                text-align: center;
+            }
+            .menu li {
+                display: inline;
+                line-height: 3;
+                border-bottom: none;
+                border-right: 0.5px solid gray;
+                border-left: 0.5px solid gray;
+                padding: 0px 3.5% 0px 3.5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav class="menu">
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>WEB</li>
+                <li>DESIGN</li>
+                <li>MAP</li>
+                <li>CONTACT</li>
+            </ul>
+        </nav>
+        <div id="title">
+            <h3>MENU</h3>
+        </div>
+    </div>
+</body>
+</html>
