@@ -1,18 +1,14 @@
 public class MyTvTest {
 	public static void main(String[] args) {
-		MyTv t = new MyTv();
-		
-		t.channel=100;
-		t.volume=0;
-		System.out.println("CH:"+t.channel+",VOL:"+t.volume);
-		
+		MyTv t = new MyTv(100,0);
+
+		System.out.println("CH:"+t.getChannel()+",VOL:"+t.getVolume());
 		t.channelDown();
 		t.volumeDown();
-		System.out.println("CH:"+t.channel+",VOL:"+t.volume);
-		
-		t.volume=100;
+		System.out.println("CH:"+t.getChannel()+",VOL:"+t.getVolume());
+		t.setVolume(100);
 		t.channelUp();
 		t.volumeUp();
-		System.out.println("CH:"+t.channel+",VOL:"+t.volume);
+		System.out.println("CH:"+t.getChannel()+",VOL:"+t.getVolume());
 	}
 }
