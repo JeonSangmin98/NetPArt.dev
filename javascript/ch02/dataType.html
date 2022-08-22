@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATATYPE</title>
+    <script>
+        // 데이터 타입
+        var tag = "<h1>String</h1>";
+        document.write(tag,"<br>");
+        document.write(typeof tag, "<br>");
+        var t = Number("100");
+        document.write(typeof t, "<br><br>")
+
+
+        // 연산자
+        var num1 = 15;
+        var num2 = 2;
+        var result;
+        result = num1 + num2;
+        document.write(result, "<br>");
+        result = num1 - num2;
+        document.write(result, "<br>");
+        result = num1 * num2;
+        document.write(result, "<br>");
+        result = num1 / num2;
+        document.write(result, "<br>");
+        result = num1 % num2;
+        document.write(result, "<br><br>");
+
+
+        // 복합대입 연산자
+        var num1 = 10;
+        var num2 = 3;
+        num1 += num2;
+        document.write(num1,"<br>");
+        num1 -= num2;
+        document.write(num1,"<br>");
+        num1 *= num2;
+        document.write(num1,"<br>");
+        num1 %= num2;
+        document.write(num1,"<br><br>");
+
+        // 증감 연산자
+        var num1 = 10;
+        var num2 = 20;
+
+        num1--;
+        document.write(num1,"<br>");
+
+        num1++;
+        document.write(num1,"<br>");
+
+        result = num2++;
+        document.write(result,"<br>");
+
+        result = ++num2;
+        document.write(result,"<br><br>")
+
+        // 비교 연산자
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var f = "20";
+        var result;
+
+        result = a > b;
+        document.write(result, "<br>");
+        result = a < b;
+        document.write(result, "<br>");
+        result = a <= b;
+        document.write(result, "<br>");
+        result = b == f;
+        document.write(result, "<br>");
+        result = a != b;
+        document.write(result, "<br>");
+        result = b === f;
+        document.write(result, "<br><br>");
+
+        // 논리 연산자
+        var a=10,
+            b=20,
+            m=30,
+            n=40;
+        var result;
+        result = a>b||b>=m||m>n;
+        document.write(result,"<br>");
+        result = a>b||b>=m||m<=n;
+        document.write(result,"<br>");
+        result = a<=b&&b>=m&&m<=n;
+        document.write(result,"<br>");
+        result = a<=b&&b<=m&&m<=n;
+        document.write(result,"<br>");
+        result = !(a>b);
+        document.write(result,"<br><br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
