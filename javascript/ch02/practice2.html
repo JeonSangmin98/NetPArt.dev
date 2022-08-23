@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>종합 실습 1-2</title>
     <script>
-        var a = 1200;
-        var b = 1300;
-        var c = 1000;
-        var d = prompt("4분기 판매량은?", "0");
-        var avg = (a+b+c)/3;
-        var result = avg<d ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다.";
-        document.write(result,"<br>");
+        // var a = 1200;
+        // var b = 1300;
+        // var c = 1000;
+        // var d = prompt("4분기 판매량은?", "0");
+        // var avg = (a+b+c)/3;    // 평균 판매량
+        // var result = avg<=d ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다.";
+        // document.write(result,"<br>");
+        var avgSales = (1200 + 1300 + 1000) / 3; // 평균 판매량
+        var fourth = prompt("4분기 판매량은?" , "0");
+        var msg_1 = "판매량이 평균 이상 입니다.",
+            msg_2 = "판매량이 평균 미달 입니다.";
+        var result = fourth >= avgSales? msg_1 : msg_2;
+        document.write(result, "<br>");
     </script>
 </head>
 <body>
