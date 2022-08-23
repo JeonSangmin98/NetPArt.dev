@@ -5,7 +5,6 @@ public class Car {
 	Car(){
 		
 	}
-	
 
 	public Car(String model) {
 		super();	// Object
@@ -28,4 +27,10 @@ public class Car {
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
+
+	@Override
+	public String toString() {
+		return "Car [model=" + model + ", speed=" + speed + "]";
+	}
+	
 }

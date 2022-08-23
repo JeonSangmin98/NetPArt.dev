@@ -4,13 +4,12 @@ abstract class Unit{
 	int x,y;
 	
 	void stop() {
+		// 현재 위치에서 정지
 		System.out.println("정지");
 	}
 	abstract void move(int x, int y);
 }
 class Marine extends Unit{	// 보병
-	int x,y;	// 현재 위치
-	
 	void move(int x, int y) {
 		// 지정된 위치로 이동
 		System.out.println(x + " " + y +" 로 이동");
@@ -21,7 +20,6 @@ class Marine extends Unit{	// 보병
 	}
 }	// Marine
 class Tank extends Unit{	// 탱크
-	int x,y;
 	void move(int x, int y) {
 		// 지정된 위치로 이동
 		System.out.println(x + " " + y +" 로 이동");
@@ -32,7 +30,6 @@ class Tank extends Unit{	// 탱크
 	}
 }	// Tank
 class DropShip extends Unit{	// 수송선
-	int x,y;
 	void move(int x, int y) {
 		// 지정된 위치로 이동
 		System.out.println(x + " " + y +" 로 이동");

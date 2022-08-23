@@ -1,4 +1,5 @@
 
+
 class Animal{
 	private double weight;
 	String picture;
