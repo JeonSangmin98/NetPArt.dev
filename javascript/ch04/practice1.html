@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var today = new Date();
+        // var nowYear = today.getFullYear();
+
+        let since = new Date(2019,12,14);
+
+        var diffDate = today.getTime() - since.getTime();
+        var result =  Math.floor(diffDate /(60 * 1000 * 60 * 24) + 1);
+        document.write("오늘은 영희와 철수가 만난지 " + result + "일 입니다.","<br>");
+
+        since.setFullYear(since.getFullYear() + 2);
+        since.setMonth(since.getMonth() + 8);
+       
+
+        document.write("만난지 1000일 되는 날은 " + since.getFullYear() + "년" + 
+                            (since.getMonth()+1) + "월" + since.getDate() +"일 입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

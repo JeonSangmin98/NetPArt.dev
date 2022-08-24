@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var year = prompt("현재 년도","0");
-        var month = prompt("현재 월","0");
-        var days = 0;
-
+        // 현재 년도와 월을 입력받습니다.
+        var year = prompt("현재 몇 년 입니까?","0000");
+        var month = prompt("현재 몇 월 입니까?","0");
+        var last_day;
+        
+        // 선택문을 이용해 현재 월이 몇 일까지 있는지 구합니다.
         switch(month){
-            case "1" : case "3" : case "5" : case "7" : case "8" : case "10" : case "12" : days = "31일";
+            case "1" : case "3" : case "5" : case "7" : case "8" : case "10" : case "12" : last_day = "31일";
             break;
             case "2" : 
-                days = ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0))? 29 : 28;
+            // last_day = ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0))? 29 : 28;
+            last_day = 28;
+            if(year%4==0 && year%100!=0 || year%400===0){   // 우선 순위 &&가 더 높음
+                last_day=29;
+            }
             break;
-            case "4" : case "6" : case "9" : case "11" : days = "30일";
+            case "4" : case "6" : case "9" : case "11" : last_day = "30일";
             break;
             default : alert("잘못 입력 하셨습니다.")
         }
-        if(month) document.write(days);
+        for(var i=1; i <= last_day; i++){
+            document.write(i + " ");
+        }
+        // if(month) document.write(last_day);
     </script>
 </head>
 <body>
