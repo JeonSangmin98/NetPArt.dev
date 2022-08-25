@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 당첨자 발표</title>
+    <style>
+        *{margin: 0;}
+        body{text-align: center;}
+        span{
+            font-weight: bold;
+            background-color: chartreuse;
+            border: 1px solid black;
+            color: black;
+        }
+        h2{color: red;}
+    </style>
+    <script>
+        var a = prompt("전체 응모자 수: ","");
+        var b = [];
+        document.write("<img src = 'images/dice.jpg'>");
+        document.write("<h2><span>전체 응모자 수 :</span>  "+ a + "명</h2>","<br>");
+        var rndNum1 = Math.floor(Math.random()*a) + 1;
+        var rndNum2 = Math.floor(Math.random()*a) + 1;
+        document.write("<h2><span>당첨 번호 :</span>  " + rndNum1 + ", "+ rndNum2 + "번!!</h2>","<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -6,21 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        
         var today = new Date();
-        // var nowYear = today.getFullYear();
-
-        let since = new Date(2019,12,14);
-
+        var since = new Date(2019,11,24);
         var diffDate = today.getTime() - since.getTime();
-        var result =  Math.floor(diffDate /(60 * 1000 * 60 * 24) + 1);
+        var result =  Math.ceil(diffDate /(60 * 1000 * 60 * 24));
         document.write("오늘은 영희와 철수가 만난지 " + result + "일 입니다.","<br>");
 
+        // 1000일 = 약 2년 8개월
         since.setFullYear(since.getFullYear() + 2);
         since.setMonth(since.getMonth() + 8);
        
 
         document.write("만난지 1000일 되는 날은 " + since.getFullYear() + "년" + 
                             (since.getMonth()+1) + "월" + since.getDate() +"일 입니다.");
+       
+       /*
+       var today = new Date();
+       var theDate = new Date(2019,11,24); // 2019년11월24일
+       var diffDate = today.getTime() - theDate.getTime();
+       var result = Math.ceil(diffDate / (24*60*60*1000));
+       document.write("만난지 " + result + "일째 되는 날입니다.","<br>");
+
+       var anniversary = new Date(2019,11,24);
+       anniversary.setDate(theDate.getDate() + 1000);
+       document.write("만난지 1000일째 되는 날은 " + anniversary + "일째 되는 날입니다.","<br>");
+       /* 
+       1s = 1000ms
+       1m = 60s
+       1h = 60m
+       1d = 24h
+       */
+        
     </script>
 </head>
 <body>
