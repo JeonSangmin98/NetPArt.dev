@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이벤트 당첨자 발표</title>
     <style>
+        /*
         *{margin: 0;}
         body{text-align: center;}
         span{
@@ -14,19 +15,75 @@
             border: 1px solid black;
             color: black;
         }
-        h2{color: red;}
+        h2{color: red;} */
+        body{
+            text-align: center;
+            font-size: 30px;
+        }
+        p{
+            padding: 20px auto;
+        }
+        .title{
+            padding: 5px;
+            border: 1px solid #ccc;
+            background: #b2fea7;
+        }
+        #total, #result{
+            width: auto;
+            padding-left: 20px;
+            color: red;
+        }
     </style>
     <script>
+        /*
         var a = prompt("전체 응모자 수: ","");
         var b = [];
         document.write("<img src = 'images/dice.jpg'>");
         document.write("<h2><span>전체 응모자 수 :</span>  "+ a + "명</h2>","<br>");
         var rndNum1 = Math.floor(Math.random()*a) + 1;
         var rndNum2 = Math.floor(Math.random()*a) + 1;
-        document.write("<h2><span>당첨 번호 :</span>  " + rndNum1 + ", "+ rndNum2 + "번!!</h2>","<br>");
+        document.write("<h2><span>당첨 번호 :</span>  " + rndNum1 + ", "+ rndNum2 + "번!!</h2>","<br>"); */
     </script>
 </head>
 <body>
-    
+    <img src="images/dice.jpg" alt="">
+
+    <p><span class="title">전체 응모자 수 : </span><span id="total"></span></p>
+    <p><span class="title">당첨 번호 : </span><span id="result"></span></p>
+
+    <script>
+        var seed = prompt("전체 응모자 수 : ");
+        var result = prompt("당첨자 수 : ");
+        // var rnum = Math.floor(Math.random() * seed) + 1;
+       
+        var totalArea = document.getElementById("total");
+        var resultArea = document.getElementById("result");
+        totalArea.innerHTML = seed + "명";
+        // resultArea.innerHTML = rnum + "번!!";
+
+        var num = Number(result);
+        // for(var i=1; i<=num; i++){
+        //     var rnum = Math.floor(Math.random() * seed) + 1;
+        //     resultArea.innerHTML += rnum;
+        //     if(i<num)
+        //         resultArea.innerHTML += ','
+        // }
+        
+        // Array를 사용하여 중복 없애기
+        var numArr = new Array();
+        do{
+            var rnum = Math.floor(Math.random() * seed) + 1;
+            if(numArr.indexOf(rnum) == -1)
+                numArr.push(rnum);
+        }while(num != numArr.length)
+        resultArea.innerHTML = numArr.join(", ");
+
+        // for(var i=0; i < result;i++){
+        //     arr[i] = rnum;
+        // }
+        // var a = [...new Set(arr)];
+        // document.write("기존 배열값 : " + arr,"<br>");
+        // document.write("중복 제거 : " + a,"<br>");
+    </script>
 </body>
 </html>
