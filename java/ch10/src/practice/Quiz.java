@@ -1,12 +1,13 @@
 package practice;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Quiz {
 	public static void main(String[] args) {
 		// 1
-		// d 
+//		 a. 첫 번째 요소 삭제	
 		
 		// 2 
 //		String[] s = {"사과","배","바나나"};
@@ -62,5 +63,23 @@ public class Quiz {
 //			}
 //		}
 //		System.out.println("점수의 합: " + sum);
+		// 5 풀이
+//		ArrayList<Double> list = new ArrayList<Double>();
+//		Scanner sc = new Scanner(System.in);
+//		for(int i=0;i<10;i++) {
+//			System.out.print("심사위원의 점수: ");
+//			double value = sc.nextDouble();
+//			list.add(value);
+//		}
+//		double max = Collections.max(list);
+//		double min = Collections.min(list);
+//		double sum = 0.0;
+//		for(double value : list) {
+//			sum += value;
+//		}
+//		sum -= (min+max);
+//		System.out.println("점수의 합: " + sum);
+		// 7
+		
 	}
 }
