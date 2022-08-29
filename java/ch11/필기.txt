@@ -1,0 +1,58 @@
+파일 입출력
+
+객체는 모두 메모리에 만들어 져서 전원이 꺼지면 사라지지만 파일로 만들면 저장 가능
+
+스트림
+	- 순서가 있는 데이터의 연속적인 흐름
+	- 입출력을 물의 흐름처럼 간주하는 것
+	
+분류
+	- 입출력 단위에따라 분류
+	- 입출력 스트릠
+		- 입출력 스트림
+			- 입력 바이트 스트림(InputStream)
+			- 출력 바이트 스트림(OutputStream)
+		- 문자 스트림
+			- 입력 문자 스트림(ReaderStream)
+			- 출력 문자 스트림(WriterStream)
+			
+		- 바이트 스트림
+			- 바이트 단위 클래스
+			- 추상 클래스 Input, Output에서 파생
+		- 문자 스트림
+			- 문자 단위 클래스 
+			
+		- InputStream
+			- abstract int read()
+		- OutputStream
+			- abstract void write()
+		
+		- FileInputStream, FileOutputStream
+			- 파일이 입출력 대상이 됨
+			
+스트림들을 결합하기
+
+버퍼 스트림
+
+브릿지 스트림
+
+줄단위 입출력
+	- 한 줄 단위로 입출력 해야 하는 경우
+	- BufferReader 와 PrintWriter 클래스 사용
+	
+문자엔코딩
+
+파일에서 텍스트 읽기
+	- 파일에 텍스트 형태로 저장된 데이터를 읽을 수 있는 가장 좋은 방법 -  Scanner 클래스 사용
+	
+	- PrintStream,PrintWriter
+		- 형식을 가진 출력을 지원하는 클래스
+		
+객체 저장하기
+	- 직렬화 : 객체가 가진 데이터들을 순차적으로 데이터로 변환하는 것
+	- Object~
+	
+Path 클래스
+	- 경로를 나타내느 클래스 "/home/work" 와 같은 경로를 받아서 객체를 변환
+File 클래스
+	- 파일이 아닌 파일이름 객체
