@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // zoomIn,zoomOut 함수 만들기
+        function zoomIn(){
+            document.getElementById("bee").width = "400";
+            document.getElementById("bee").height = "260";
+        }
+        function zoomOut(){
+            document.getElementById("bee").width = "100";
+            document.getElementById("bee").height = "60";
+        }
+
+        // 매개변수 1개를 boolean 형으로 갖는 함수
+        function zoom1(zoomin){
+            var imgTag = document.getElementById("bee");
+            if(zoomin){
+                imgTag.width = "400";
+                imgTag.height = "260";
+            }else{
+                imgTag.width = "100";
+                imgTag.height = "60";
+            }
+        }
+
+        // 너비와 높이를 매개변수로 갖는 zoom 함수
+        function zoom2(newWidth, newHeight){
+            var imgTag = document.getElementById("bee");
+            imgTag.width = newWidth;
+            imgTag.height = newHeight;
+        }
+    </script>
+    <style>
+        button{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/bee.jpg" width="200" height="130" id="bee">
+    <!-- <button onclick="zoomIn()">ZoomIn</button>
+    <button onclick="zoomOut()">ZoomOut</button> -->
+    <button onclick="zoom1(true)">ZoomIn</button>
+    <button onclick="zoom2('100','60')">ZoomOut</button>
+</body>
+</html>
