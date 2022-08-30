@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function sum(num){
+        //     var result = 0;
+        //     for(var i = 1; i <= num; i++){
+        //         result += i;
+        //     }
+        //     return alert(num + "까지 더한 값은 " + result + "입니다.");
+        // }
+        function displaySum(num){
+            function sum(num){
+                var result = 0;
+                for(var i = 1; i <= num; i++){
+                    result += i;
+                }
+                return alert(num + "까지 더한 값은 " + result + "입니다.");
+            }
+            sum(num);
+        }
+    </script>
+    <style>
+        input{
+            margin: 10px;
+            padding: 20px;
+            background-color: #a9fcff;
+            border: 3px solid black;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        input:hover{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="10까지 더하기" onclick="displaySum(10)">
+    <input type="button" value="50까지 더하기" onclick="displaySum(50)">
+    <input type="button" value="100까지 더하기" onclick="displaySum(100)">
+</body>
+</html>
