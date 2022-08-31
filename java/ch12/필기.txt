@@ -11,3 +11,13 @@ Calendar,Date
 
 Calendar - get()메소드
  - get()으로 날짜와 시간 필드 가져오기
+ 
+
+SimpleDateFormat
+	- Calendar와 Date를 통해 얻는 날짜 Date를 다양한 형태로 출력
+	
+Random
+	Random rand = new Random();	// 실행할 때마다 다른 결과 보임
+	
+StringTokenizer
+	StringTokenizer st = new StringTokenizer(구분자);

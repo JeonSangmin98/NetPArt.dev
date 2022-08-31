@@ -7,13 +7,13 @@ public class Quiz1 {
 	public static void main(String[] args) {
 		Calendar cal = Calendar.getInstance();
 		Scanner sc = new Scanner(System.in);
-		System.out.print("년도를 입력: ");
+		System.out.print("년도 입력: ");
 		int year = sc.nextInt();
-		System.out.print("월을 입력: ");
+		System.out.print("월 입력: ");
 		int month = sc.nextInt();
+		cal.set(year, month -1,1);
 		System.out.printf("\t\t    %d년 %d월\n",year,month);
 		System.out.println("일\t월\t화\t수\t목\t금\t토");
-		cal.set(year, month -1,1);
 		
 		// 1일이 무슨 요일인지
 		int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
@@ -30,6 +30,18 @@ public class Quiz1 {
 			dayOfWeek++;
 		}
 		
-		
+		// 풀이
+//		int lastday = cal.getActualMaximum(Calendar.DATE);
+//		for(int i=1; i<=lastday;i++) {
+//			// 날짜 \t 출력
+//			System.out.print(i + "\t");
+//			// 요일 증가
+//			dayOfWeek++;
+//			// 요일이 7보다 커지면 (토요일 다음날) 줄바꾸고 일요일로 값 지정
+//			if(dayOfWeek>7) {
+//				System.out.println();
+//				dayOfWeek=1;
+//			}
+//		}
 	}
 }
