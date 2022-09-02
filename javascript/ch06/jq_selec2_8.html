@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$.map()/$.grep()메서드</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        // 배열에 저장된 요소만큼 메서드를 반복 실행
+        $(function(){
+            var arr1 = [
+            {"area" : "서울", "name" : "무대리"},
+            {"area" : "부산", "name" : "홍과장"},
+            {"area" : "대전", "name" : "박사장"},
+            {"area" : "서울", "name" : "빅마마"}]
+
+            var arr2 = $.map(arr1, function(o,i) {
+                if(o.area == "서울")
+                    return o;
+            });
+            console.log(arr2);
+            console.log("==== First End ====");
+
+            var arr3 = $.grep(arr1, function(o,i) {
+                if(o.area == "서울")
+                    return true;
+                else
+                    return false;
+            });
+            console.log(arr3);
+            console.log("==== Second End ====");
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
