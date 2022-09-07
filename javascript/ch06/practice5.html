@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        ul{
+            list-style: none;
+        }
+        #menu li{
+            float: left;
+        }
+        input{
+            margin: 10px;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        hr{
+            clear: both;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#button1").click($(function(){
+                $("a[href]").attr({
+                    "background-color" : "yellow",
+                    "font-weight" : "bold",
+                    "text-decoration" : "none"
+                });
+            }));
+            $("#button2").click($(function(){
+                $("a[target=_blank]").attr({
+                    "bacground-color" : "lightgreen",
+                    "font-weight" : "bold",
+                    "text-decoration" : "none"
+                });
+            }));
+            $("#button3").click($(function(){
+                $("a[href$=pdf]").attr({
+                    "background-color" : "green",
+                    "font-weight" : "bold",
+                    "text-decoration" : "none"
+                });
+            }));
+            $("#button4").click($(function(){
+                $("a[href^=mailto:]").attr({
+                    "background-color" : "green",
+                    "font-weight" : "bold",
+                    "text-decoration" : "none"
+                });
+            }));
+        });
+    </script>
+</head>
+<body>
+   미완
+</body>
+</html>

@@ -41,7 +41,7 @@ public class Quiz4 extends JFrame{
 		Font f = new Font("Times",Font.ITALIC,80);
 		label.setFont(f);
 		label.setHorizontalAlignment(JLabel.CENTER);
-		setSize(1100,300);
+		setSize(1200,300);
 		add(label,BorderLayout.CENTER);
 		setVisible(true);
 	}

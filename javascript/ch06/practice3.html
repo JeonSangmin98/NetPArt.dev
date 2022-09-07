@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밤 낮</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#sun").click(function(){
+                $("#weather").html("<img src='images/sun.jpg'>");
+            });
+            $("#moon").click(function(){
+                $("#weather").html("<img src='images/moon.jpg'>");
+            });
+        });
+        
+    </script>
+    <style>
+        button{
+            background-color: cyan;
+            border: 1px solid blue;
+            margin-right: 50px;
+            margin-top: 30px;
+            padding: 10px 25px 10px 25px;
+        }
+        button:hover{
+            background-color: cadetblue;
+            cursor: pointer;
+        }
+        #weather{
+            border: 1px solid black;
+            margin-top: 50px;
+            width: 350px;
+            height: 350px;
+        }
+    </style>
+</head>
+<body>
+    <button id="sun">낮이라면 클릭!</button>
+    <button id="moon">밤이라면 클릭!</button>
+    <div id="weather"></div>
+</body>
+</html>

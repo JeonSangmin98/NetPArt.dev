@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학과 공지사항</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#b1").click(function(){
+                $("#main h2").html("");
+                $("#main").css({
+                    "background-color" : "white",
+                    "color" : "black"
+                });
+            });
+            $("#b2").click(function(){
+                $("#main h2").html("2학년 공지사항")
+                $("#main").css({
+                    "background-color" : "magenta", 
+                    "color" : "white"
+                });
+            });
+            $("#b3").click(function(){
+                $("#main h2").html("3학년 공지사항");
+                $("#main").css({
+                    "background-color" : "#0fa",
+                    "color" : "black"
+                });
+            });
+            $("#b4").click(function(){
+                $("#main h2").html("4학년 공지사항");
+                $("#main").css({
+                    "background-color" : "skyblue",
+                    "color" : "black"
+                });
+            });
+        });
+    </script>
+    <style>
+        .bnav{
+            /* margin-left: 78%; */
+            text-align: right;
+        }
+        button{
+            border: 1px solid #eee;
+            border-radius: 50%;
+            color: white;
+            margin: 10px;
+        }
+        #b1{
+            background-color: orange;
+        }
+        #b2{
+            background-color: yellow;
+        }
+        #b3{
+            background-color: green;
+        }
+        #b4{
+            background-color: blue;
+        }
+        #main{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding-top: 5px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            margin: 0 auto;
+            width: 80%;
+            height: 80%;
+            line-height: 2.7em;
+        }
+        h2::first-letter{
+            font-size: 40px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="bnav">
+        <button id="b1">1</button>
+        <button id="b2">2</button>
+        <button id="b3">3</button>
+        <button id="b4">4</button>
+    </div>
+    <h1>새내기들과 함께하는 학과 전체 MT</h1>
+    <div id="main">
+        <h2></h2>
+        <p>
+            안녕하십니까?<br><br>
+            벌써 학기가 시작된지 한 달이 되어값니다.<br>
+            올해도 새내기들과 함께 하는 학과 전체 MT를 갑니다.<br>
+            새내기들이 재학생과 교수님들과의 친목을 도모할 수 있는 자리를 마련하고자 합니다.<br><br>
+            해마다 있는 행사지만 꼭 참석하셔서 사제간에, 선후배간에 돈독한 정을 쌓을 수 있기를 바랍니다.
+        </p>
+        <ul>
+            <li><b>행사명</b> : 컴퓨터공학과 전체 MT</li>
+            <li><b>행사 목적</b> : 선후배간, 사제간의 유대 관계 형성과 친목을 위함</li>
+            <li><b>행사일</b> : 3월 25일(금) ~ 3월 27일(일)</li>
+        </ul>
+    </div>
+</body>
+</html>
