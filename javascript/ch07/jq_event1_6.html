@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 접근성 적용 이벤트</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            // .data({"속성" : "값"}) : "속성"에 "값"을 등록
+            $("#btn1")
+            .data({"text" : "javascript"})
+            .on({
+                // 만들어둔 overFnc, outFnc메소드를 호출
+                "mouseover" : overFnc,
+                "mouseout" : outFnc
+            });
+
+            $("#btn2")
+            .data({"text" : "welcome!"})
+            .on({
+                // focus : 키보트 tab키로 포커스를 시켯을때, blur : 포커스가 떠났을 때
+                "mouseover focus" : overFnc,
+                "mouseout blur" : outFnc
+            });
+
+            function overFnc(){
+                // $(this) : 이벤트가 발생 했을 때 , .data({"속성"}) : 등록했던 속성 불러오기
+                $(".txt").text($(this).data("text"));
+            }
+            function outFnc(){
+                $(".txt").text("");
+            }
+        });
+    </script>
+</head>
+<body>
+    <p><button id="btn1">버튼1</button></p>
+    <p><button id="btn2">버튼2</button></p>
+    <p class="txt"></p>
+</body>
+</html>

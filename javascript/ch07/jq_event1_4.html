@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover() / mouseout() / hover()</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            // 선택한 요소에 마우스 포인터를 올릴 때마다
+           $(".btn1").on({
+            "mouseover" : function(){
+                $(".txt1").css({"background-color" : "yellow"});
+            },
+
+            // 선택한 요소에 마우스 포인터가 벗어날 때마다
+            "mouseout" : function(){
+                $(".txt1").css({"background" : "none"});
+            }
+           });
+
+           // 선택한 요소에 마우스 포인터가 올라갈때와 벗어날 때 각각 이벤트 발생
+           $(".btn2").hover(function(){
+            $(".txt2").css({"background-color" : "aqua"});
+           }, function(){
+            $(".txt2").css({"background" : "none"});
+           });
+        });
+    </script>
+</head>
+<body>
+    <p><button class="btn1">Mouse Over / Mouse Out</button></p>
+    <p class="txt1">내용1</p>
+    <p><button class="btn2">Hover</button></p>
+    <p class="txt2">내용2</p>
+</body>
+</html>

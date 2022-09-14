@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        p{
+            line-height: 2em;
+        }
+        #btn{
+            background-color: black;
+            color: white;
+            width: 6em;
+            border: 3px solid black;
+        }
+        #add{
+            width: 300px;
+            border: 3px solid black;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        $(function(){
+            var list = new Array();
+            $("#btn").on("click", function(){
+                $(".txt").text($("#add").val());
+            });
+
+            $("#add").on("keyup", function(e){
+                if(e.keyCode == 13){
+                    $(".txt").text($("#add").val());
+                }
+            });
+
+            $(".txt").on("click", function(){
+                $(".txt").text("");
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <h1>Web Programing</h1>
+    <p>
+        공부할 주제를 기록해 보세요 <br>
+        공부가 끝난 것은 클릭해서 삭제할 수 있습니다.
+    </p>
+    <p><input type="text" id="add"><button id="btn">추가</button></p>
+    <p class="txt"></p>
+</body>
+</html>
