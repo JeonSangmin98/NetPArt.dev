@@ -1,0 +1,49 @@
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class CarGame extends JFrame{
+	
+	class MyThread extends Thread{
+		private JLabel label;
+		private int x,y;
+		
+		MyThread(String fname, int x, int y){
+			this.x = x;
+			this.y = y;
+			label = new JLabel();
+			label.setIcon(new ImageIcon(fname));	// fname = 이미지파일이름
+			label.setBounds(x,y,100,100);	// 좌표와 크기
+			add(label);
+		}// MyThread
+		
+		@Override
+		public void run() {
+			for(int i=0; i<200; i++) {
+				x += 10 * Math.random();
+				label.setBounds(x,y,100,100);
+				repaint();
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}// for
+		}// run
+	}// MyThread
+	
+	CarGame(){
+		setTitle("CarGame");
+		setSize(600,200);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(null);
+		new MyThread("car1.gif", 100,0).start();
+		new MyThread("car2.gif", 100,50).start();
+		new MyThread("car3.gif", 100,100).start();
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new CarGame();
+	}
+}
