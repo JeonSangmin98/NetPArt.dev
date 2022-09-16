@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 150px;
+            padding: 10px;
+            font-size: 0.8em;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        h2{
+            width: 150px;
+            background-color: aqua;
+            box-shadow: 2px 2px;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            $(".card").hide();
+
+            $("#prof1").on("click",function(){
+                $("#intro1>.card").slideToggle(1000, "linear");
+            });
+            $("#prof1").on("click",function(){
+                $("#intro1").slideToggle(1000, "linear");
+            });
+
+            $("#prof2").on("click",function(){
+                $("#intro2>.card").fadeToggle("slow", "linear");
+            });
+            $("#prof2").on("click",function(){
+                $("#intro2").fadeToggle("slow", "linear");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>컴퓨터 공학과 교수 소개</h1>
+    <div>
+        <h2 id="prof1">홍길동 교수</h2>
+        <div id="intro1" class="card">
+            <p>소속 : 컴퓨터 공학과</p>
+            <p>전공 : 프로그래밍 언어</p>
+            <p>전화 : xxx-xxx-xxxx</p>
+            <p>연구실 : 공학관 103호</p>
+        </div>
+    </div>
+    <div>
+        <h2 id="prof2">한라산 교수</h2>
+        <div id="intro2" class="card">
+            <p>소속 : 컴퓨터 공학과</p>
+            <p>전공 : 분산처리</p>
+            <p>전화 : xxx-xxx-xxxx</p>
+            <p>연구실 : 공학관 101호</p>
+        </div>
+    </div>
+</body>
+</html>

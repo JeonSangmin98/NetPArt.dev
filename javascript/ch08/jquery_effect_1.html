@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과메서드</title>
+    <style>
+        .content{
+            width: 400px;
+            background-color: #eee;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            $(".btn2").hide();
+
+            // slideUp 버튼을 클릭하면 class 값이 box인 요소가 위로 접히며 숨겨짐.
+            // 그런 다음 콜백 함수가 실행되어 slideUp 버튼이 숨겨지고 fadeIn 버튼이 나타남
+            $(".btn1").on("click", function(){
+                $(".box").slideUp(1000,"linear",function(){
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                });
+            });
+
+            $(".btn2").on("click",function(){
+                $(".box").fadeIn(1000,"swing",function(){
+                    $(".btn2").hide();
+                    $(".btn1").show();
+                });
+            });
+
+            // toggleSlide 버튼을 클릭하면 class 값이 box인 요소가 접히가나 펴짐
+            $(".btn3").on("click",function(){
+                $(".box").slideToggle(1000,"linear");
+            });
+
+            // fadeTo(0.3)을 클릭하면 class 값이 box인 요소가 70% 투명해진다
+            $(".btn4").on("click",function(){
+                $(".box").fadeTo("fast",0.3);
+            });
+            //,fadeTp(1)을 클릭하면 투명화 취소
+            $(".btn5").on("click",function(){
+                $(".box").fadeTo("fast",1);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <button class="btn1">slideUp</button>
+        <button class="btn2">fadeIn</button>
+    </p>
+    <p>
+        <button class="btn3">toggleSlide</button>
+    </p>
+    <p>
+        <button class="btn4">fadeTo(0.3)</button>
+        <button class="btn5">fadeTo(1)</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Unde repudiandae optio maxime quasi ut ducimus labore! 
+            Possimus deleniti corporis libero ipsum facere repellendus veniam illo totam! 
+            Possimus nesciunt similique quibusdam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Iure earum voluptatibus a consectetur vitae incidunt consequuntur culpa ratione fugit ex qui, 
+            magnam repudiandae quam, rem, necessitatibus voluptate voluptas eos in!
+        </div>
+    </div>
+</body>
+</html>

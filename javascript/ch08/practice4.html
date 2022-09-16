@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gallery{
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: blueviolet;
+        }
+        img{
+            padding: 10px;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#spring").hide();
+            $("#summer").hide();
+            $("#fall").hide();
+            $("#winter").hide();
+
+            $("#spring-s").on("click", function(){
+                $("#spring-s").hide();
+                $("#spring").show();
+            });
+            $("#summer-s").on("click", function(){
+                $("#summer-s").hide();
+                $("#summer").show();
+            });
+            $("#fall-s").on("click", function(){
+                $("#fall-s").hide();
+                $("#fall").show();
+            });
+            $("#winter-s").on("click", function(){
+                $("#winter-s").hide();
+                $("#winter").show();
+            });
+
+            $("#spring").on("click",function(){
+                $("#spring").hide();
+            });
+            $("#summer").on("click",function(){
+                $("#summer").hide();
+            });
+            $("#fall").on("click",function(){
+                $("#fall").hide();
+            });
+            $("#winter").on("click",function(){
+                $("#winter").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>사용법</h1>
+    <ol>
+        <li>작은 이미지를 클릭하면 큰 이미지가 나타납니다.</li>
+        <li>큰 이미지를 클릭하면 큰 이미지가 사라집니다.</li>
+    </ol>
+    <div id="gallery">
+        <figure id="box1">
+            <img src="images/spring-s.jpg" id="spring-s">
+            <img src="images/summer-s.jpg" id="summer-s">
+            <img src="images/fall-s.jpg" id="fall-s">
+            <img src="images/winter-s.jpg" id="winter-s">
+            
+            <img src="images/spring.jpg" id="spring">
+            <img src="images/summer.jpg" id="summer">
+            <img src="images/fall.jpg" id="fall">
+            <img src="images/winter.jpg" id="winter">            
+        </figure>
+    </div>
+</body>
+</html>
