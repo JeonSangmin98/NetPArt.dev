@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableViewProxyOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g" name="MEMBERTBL_VIEW" directorySegmentName="seg_0" id="367CAC37-2F1A-049E-AAFF-EBE87EC693AF">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<schemaObject>24986148-E20F-6ADF-71D6-CC032E9C540F</schemaObject>
+</TableViewProxyOraclev10g>

@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="DELETEDMEMBERTBL" directorySegmentName="seg_0" id="C62DB134-3AAD-48DB-B6F4-AD19296C1600">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>24986148-E20F-6ADF-71D6-CC032E9C540F</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>ABD1C74A-FBB6-7D47-619E-46809925284C</segment>
+<tableSpace>545C2A52-1505-473D-2CE5-42049D1A34C1</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="MEMBERNAME" id="4CE01B45-3174-A72F-03CA-D9A1340C8AF5">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MEMBERID" id="605B0613-C280-4D4F-EC4A-5A617E4CAAA1">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DELETEDATE" id="B718ABB5-85E2-8B0B-C12B-EBEF15FA547C">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MEMBERADDRESS" id="FB5005A5-DF1C-14E0-BAD6-8E1B141D1E06">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

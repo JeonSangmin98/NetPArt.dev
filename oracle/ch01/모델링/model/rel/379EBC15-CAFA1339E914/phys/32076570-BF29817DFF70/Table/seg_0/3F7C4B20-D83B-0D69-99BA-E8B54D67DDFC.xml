@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="userTBL" directorySegmentName="seg_0" id="3F7C4B20-D83B-0D69-99BA-E8B54D67DDFC">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:33:28 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="addr" id="11581A4A-3F96-8D6E-F914-08F4377ABE32">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:33:28 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="userName" id="4BEA166C-75DB-F6C7-4CB5-3B4C175838AA">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:33:28 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="mobile" id="7205688A-236E-A287-3975-F4678B56EE39">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:33:28 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="birthYear" id="9F5D53DF-8BF1-5F8B-CDA4-598B7FFC8A70">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:33:28 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="userTBL_PK" id="CF0F2114-C074-5C4B-A3D8-FAB1FB32FC90">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:33:28 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

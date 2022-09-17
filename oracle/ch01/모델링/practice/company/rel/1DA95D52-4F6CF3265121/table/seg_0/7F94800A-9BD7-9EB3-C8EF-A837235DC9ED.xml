@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F94800A-9BD7-9EB3-C8EF-A837235DC9ED" name="DEPARTMENT">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:15:33 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="departmentID" id="3356CD21-7ACB-DA47-36BA-ED34B54D0D63">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:16:53 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="departmentName" id="9A462AF2-AE8C-3365-E80A-05EFBE41E7AA">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:17:05 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="departmentPhone" id="DDCCC963-ADC5-0BA7-A589-9D4B4E2F33EA">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:17:40 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="85C287B1-B0E4-733A-A097-E6C57586AFC0" name="DEPARTMENT_PK">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:20:10 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3356CD21-7ACB-DA47-36BA-ED34B54D0D63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

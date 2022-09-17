@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C62DB134-3AAD-48DB-B6F4-AD19296C1600" schemaObject="24986148-E20F-6ADF-71D6-CC032E9C540F" name="DELETEDMEMBERTBL">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>DELETEDMEMBERTBL</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>75B646D7-D1A4-1B9C-7A7E-710431465101</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MEMBERID" id="605B0613-C280-4D4F-EC4A-5A617E4CAAA1">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>DELETEDMEMBERTBL</sourceObjSchema>
+<sourceObjName>MEMBERID</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>237EEDF4-899B-A7B6-105C-E7994B70CD3B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBERNAME" id="4CE01B45-3174-A72F-03CA-D9A1340C8AF5">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>DELETEDMEMBERTBL</sourceObjSchema>
+<sourceObjName>MEMBERNAME</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>0D04D86F-AC51-0BAD-2A6E-2D9C628BDC92</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBERADDRESS" id="FB5005A5-DF1C-14E0-BAD6-8E1B141D1E06">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>DELETEDMEMBERTBL</sourceObjSchema>
+<sourceObjName>MEMBERADDRESS</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>D02B4E76-3F55-C2B1-FEC1-E3118AFC58DC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DELETEDATE" id="B718ABB5-85E2-8B0B-C12B-EBEF15FA547C">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>DELETEDMEMBERTBL</sourceObjSchema>
+<sourceObjName>DELETEDATE</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>CD83637F-D298-3752-8A9F-677681901E40</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

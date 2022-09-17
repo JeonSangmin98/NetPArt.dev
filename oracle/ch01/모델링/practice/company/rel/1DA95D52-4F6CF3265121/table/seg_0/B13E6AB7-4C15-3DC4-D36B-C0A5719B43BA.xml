@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B13E6AB7-4C15-3DC4-D36B-C0A5719B43BA" name="EMPLOYEEFAMILY">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:11:29 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="empFamilyName" id="DAAE7D1A-6A23-702C-147A-24BCBB63BDA8">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:12:04 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="empFamilyBirth" id="248656CB-971C-E146-EF16-8A5C6FAB8F9E">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:12:23 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="empFamilyRelationship" id="54BE9C82-FD8C-ACF1-D599-6FD783B96867">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:13:19 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLOYEE_employeeID" id="757F425E-4DD3-BB05-49BA-2AE63C455916">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:24:18 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2FC72390-D95F-E629-1211-DAABF669A39B" referredColumn="DDCCE5B7-E6B5-AD47-8A93-B2D356710BED"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="21CA2B19-46AA-08F2-C6B8-9BF534A5BA1C" name="EMPLOYEEFAMILY_EMPLOYEE_FK">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:24:18 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="757F425E-4DD3-BB05-49BA-2AE63C455916"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

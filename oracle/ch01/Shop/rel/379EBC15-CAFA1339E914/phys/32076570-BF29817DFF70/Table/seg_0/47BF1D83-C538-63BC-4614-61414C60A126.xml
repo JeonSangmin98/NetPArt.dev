@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="INDEXTBL" directorySegmentName="seg_0" id="47BF1D83-C538-63BC-4614-61414C60A126">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<schemaObject>24986148-E20F-6ADF-71D6-CC032E9C540F</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>ABD1C74A-FBB6-7D47-619E-46809925284C</segment>
+<tableSpace>545C2A52-1505-473D-2CE5-42049D1A34C1</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="HIRE_DATE" id="3A5C6C32-DF09-E462-F4A8-C3FE7BA06B8E">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FIRST_NAME" id="741402AE-29AF-E691-C6BF-1E1D928646E3">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LAST_NAME" id="A2F7473A-7033-B4E0-6B15-182BD63C94F4">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="IDX_INDEXTBL_FIRSTNAME" id="92C2B472-FE94-8529-D11B-1A4AF21759E3">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<schemaObject>24986148-E20F-6ADF-71D6-CC032E9C540F</schemaObject>
+<segment>595D4696-0A1B-3D0E-DECA-CC8DEF74A631</segment>
+<tableSpace>545C2A52-1505-473D-2CE5-42049D1A34C1</tableSpace>
+</IndexProxy>
+</indexProxies>
+</TableProxyOraclev11g>

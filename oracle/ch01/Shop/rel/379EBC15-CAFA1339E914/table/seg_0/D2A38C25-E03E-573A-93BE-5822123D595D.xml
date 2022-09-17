@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D2A38C25-E03E-573A-93BE-5822123D595D" schemaObject="24986148-E20F-6ADF-71D6-CC032E9C540F" name="PRODUCTTBL">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>PRODUCTTBL</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>6246FE9C-0554-DDF7-E05F-E92F63059972</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCTNAME" id="C47C7DE0-543A-7EB9-A298-7BEBD2816F77">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>PRODUCTTBL</sourceObjSchema>
+<sourceObjName>PRODUCTNAME</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>FFAA0CD1-8532-BDA4-889F-FC35736D81D6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COST" id="C5D72D3E-5E14-7504-559E-245AC49C0E8E">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>PRODUCTTBL</sourceObjSchema>
+<sourceObjName>COST</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>57984C76-7969-D4C8-C7B6-788799AA18BE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAKEDATE" id="917DF038-CB22-A2A8-195C-E710B770B9BE">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>PRODUCTTBL</sourceObjSchema>
+<sourceObjName>MAKEDATE</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>1FFA443B-9762-708C-4CF7-F7600D5D2B5F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMPANY" id="3E288820-CCCD-12C0-5121-083F7B3807EB">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>PRODUCTTBL</sourceObjSchema>
+<sourceObjName>COMPANY</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>13387471-AA85-2825-CFAE-1F805DFD1B27</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AMOUNT" id="7B016F33-A80A-062F-8E9E-7C098D64B0B3">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>PRODUCTTBL</sourceObjSchema>
+<sourceObjName>AMOUNT</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>6561D4DE-35B5-063A-FA62-D5880F24E404</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A22C427-0458-4309-BD6F-4336061D393B" name="PRODUCTTBL_PK">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>PRODUCTTBL_PK</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>F8A86DF0-D09E-978D-7BA0-9357F0D871AE</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C47C7DE0-543A-7EB9-A298-7BEBD2816F77"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8431D536-DEFA-7876-7CCF-76C544E94F13" schemaObject="24986148-E20F-6ADF-71D6-CC032E9C540F" name="PRODUCTTBL_PK">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>PRODUCTTBL_PK</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:54:55 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<importedID>F118BE16-836C-03C6-0DEB-A9A873E3EC46</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C47C7DE0-543A-7EB9-A298-7BEBD2816F77"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

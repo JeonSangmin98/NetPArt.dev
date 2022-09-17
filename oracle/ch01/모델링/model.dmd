@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="model" id="6DBE11E3-E725-7F44-A541-D5495B99338F" version="3.5">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:22:16 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>6DBE11E3-E725-7F44-A541-D5495B99338F</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="18FCB1FE-C076-A39F-97C6-F0FA83FD408E">
+<designStoragePath>/Users/netpart/Desktop/Dev/oracle/ch01/모델링</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

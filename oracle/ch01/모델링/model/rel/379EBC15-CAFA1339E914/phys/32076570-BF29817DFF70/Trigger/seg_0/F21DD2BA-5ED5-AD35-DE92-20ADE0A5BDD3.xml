@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_DELETEDMEMBERTBL" directorySegmentName="seg_0" id="F21DD2BA-5ED5-AD35-DE92-20ADE0A5BDD3">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>TRG_DELETEDMEMBERTBL</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:52:04 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<actions>DELETE</actions>
+<body><![CDATA[begin
+    -- :old 테이블의 내용을 백업 테이블에 삽입
+    insert into deletedMemberTBL
+        values(:old.memberID, :old.memberName, :old.memberAddress, sysdate());
+end;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>2F166606-E31B-176B-619D-9CA5D21F1093</owner>
+<table>60BD71B2-1650-9FE2-D67A-13CB29857109</table>
+</TriggerOraclev10g>

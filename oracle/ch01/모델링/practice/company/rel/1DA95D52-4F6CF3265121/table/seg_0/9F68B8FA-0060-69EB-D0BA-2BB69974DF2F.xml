@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9F68B8FA-0060-69EB-D0BA-2BB69974DF2F" name="PROJECT">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:13:36 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="projectID" id="FA914175-780B-399D-21EC-1B4E264E2773">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:14:22 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="projectName" id="F531F8A6-36A5-0590-DA72-5E70AA4AF4E1">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:14:47 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="projectStart" id="79EE2470-6D74-F9DC-EA6D-F249B1D65971">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:15:03 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="projectEnd" id="7369EC84-AF75-2C50-0709-95D297C077FD">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:15:16 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C49046F7-BEE3-ED47-2676-3E5CF79C48BD" name="PROJECT_PK">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 07:22:22 UTC</createdTime>
+<ownerDesignName>company</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA914175-780B-399D-21EC-1B4E264E2773"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

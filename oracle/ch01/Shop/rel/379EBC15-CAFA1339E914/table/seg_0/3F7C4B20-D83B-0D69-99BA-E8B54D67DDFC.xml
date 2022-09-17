@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3F7C4B20-D83B-0D69-99BA-E8B54D67DDFC" name="userTBL">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:23:12 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="userName" id="4BEA166C-75DB-F6C7-4CB5-3B4C175838AA">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:24:07 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birthYear" id="9F5D53DF-8BF1-5F8B-CDA4-598B7FFC8A70">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:24:41 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="addr" id="11581A4A-3F96-8D6E-F914-08F4377ABE32">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:24:56 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mobile" id="7205688A-236E-A287-3975-F4678B56EE39">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:25:23 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CF0F2114-C074-5C4B-A3D8-FAB1FB32FC90" name="userTBL_PK">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-17 06:24:07 UTC</createdTime>
+<ownerDesignName>Shop</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BEA166C-75DB-F6C7-4CB5-3B4C175838AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
