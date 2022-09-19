@@ -18,39 +18,50 @@
     <script src="js/jquery.js"></script>
     <script>
         $(function(){
-            $("#spring").hide();
-            $("#summer").hide();
-            $("#fall").hide();
-            $("#winter").hide();
+            // $("#spring").hide();
+            // $("#summer").hide();
+            // $("#fall").hide();
+            // $("#winter").hide();
 
-            $("#spring-s").on("click", function(){
-                $("#spring-s").hide();
-                $("#spring").show();
-            });
-            $("#summer-s").on("click", function(){
-                $("#summer-s").hide();
-                $("#summer").show();
-            });
-            $("#fall-s").on("click", function(){
-                $("#fall-s").hide();
-                $("#fall").show();
-            });
-            $("#winter-s").on("click", function(){
-                $("#winter-s").hide();
-                $("#winter").show();
-            });
+            // $("#spring-s").on("click", function(){
+            //     $("#spring-s").hide();
+            //     $("#spring").show();
+            // });
+            // $("#summer-s").on("click", function(){
+            //     $("#summer-s").hide();
+            //     $("#summer").show();
+            // });
+            // $("#fall-s").on("click", function(){
+            //     $("#fall-s").hide();
+            //     $("#fall").show();
+            // });
+            // $("#winter-s").on("click", function(){
+            //     $("#winter-s").hide();
+            //     $("#winter").show();
+            // });
 
-            $("#spring").on("click",function(){
-                $("#spring").hide();
+            // $("#spring").on("click",function(){
+            //     $("#spring").hide();
+            // });
+            // $("#summer").on("click",function(){
+            //     $("#summer").hide();
+            // });
+            // $("#fall").on("click",function(){
+            //     $("#fall").hide();
+            // });
+            // $("#winter").on("click",function(){
+            //     $("#winter").hide();
+            // });
+
+            $("img[id*=small]").each(function(i,o){
+                $(o).click(function(){
+                    $("#big" + (i+1)).fadeIn(1000);
+                });
             });
-            $("#summer").on("click",function(){
-                $("#summer").hide();
-            });
-            $("#fall").on("click",function(){
-                $("#fall").hide();
-            });
-            $("#winter").on("click",function(){
-                $("#winter").hide();
+            $("img[id*=big]").each(function(i,o){
+                $(o).click(function(){
+                    $(o).fadeOut(1000);
+                });
             });
         });
     </script>
@@ -63,15 +74,14 @@
     </ol>
     <div id="gallery">
         <figure id="box1">
-            <img src="images/spring-s.jpg" id="spring-s">
-            <img src="images/summer-s.jpg" id="summer-s">
-            <img src="images/fall-s.jpg" id="fall-s">
-            <img src="images/winter-s.jpg" id="winter-s">
-            
-            <img src="images/spring.jpg" id="spring">
-            <img src="images/summer.jpg" id="summer">
-            <img src="images/fall.jpg" id="fall">
-            <img src="images/winter.jpg" id="winter">            
+            <img src="images/spring-s.jpg" id="small1" class="small">
+            <img src="images/summer-s.jpg" id="small2" class="small">
+            <img src="images/fall-s.jpg" id="small3" class="small">
+            <img src="images/winter-s.jpg" id="small4" class="small">
+            <img src="images/spring.jpg" id="big1" class="big">
+            <img src="images/summer.jpg" id="big2" class="big">
+            <img src="images/fall.jpg" id="big3" class="big">
+            <img src="images/winter.jpg" id="big4" class="big">            
         </figure>
     </div>
 </body>

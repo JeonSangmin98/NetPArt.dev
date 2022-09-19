@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datepicker() 날짜 계산</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script>
+        $(function(){
+            // var date = $('#datepicker').datepicker({ dateFormat: 'dd-mm-yy' }).val();
+            
+            $("#startDate").datepicker({dateFormat: 'D, yy-mm-dd'});
+            
+            var date = $("startDate").datepicker({
+                onSelect: function(){
+                    var date = $.datepicker.formatDate("yy-mm-dd", $("#startDate").datepicker("getDate"));
+                }
+            });
+            var today = new Date();
+
+            $("#btn").click(function(){
+                $("#txt").text("오늘 부터 " + (date - today.getDate()) + "일 이후 입니다.");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <label for="startDate">날짜선택</label>
+        <input type="text" name="startDate" id="startDate">
+    </p>
+    <button id="btn">확인</button>
+    <p id="txt"></p>
+</body>
+</html>

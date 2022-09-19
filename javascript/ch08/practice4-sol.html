@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #gallery{
+        width: 920px;
+        height: 190px;
+        position: relative;
+        background: #808080;
+        border: 2px solid black;
+        border-radius: 10px;
+       }
+       ul{
+        list-style: none;
+        margin-left: -20px;
+       }
+       ul li{
+        display: inline;
+       }
+       .bigPic{
+        position: absolute;
+        display: none;
+        margin-left: 100px;
+        margin-top: -50px;
+       }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            // $("#small1").click(function(){
+            //     $("#big1").fadeIn(1000);
+            // });
+            // $("#big1").click(function(){
+            //     $("#big1").fadeOut(1000);
+            // });
+            
+            // 반복
+            $("img[id*=small]").each(function(idx, obj){
+                $(obj).click(function(){
+                    $("#big" + (idx+1)).fadeIn(1000);
+                });
+            });
+            $("img[id*=big]").each(function(idx, obj){
+                $(obj).click(function(){
+                    $(obj).fadeOut(1000);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>사용법</h1>
+    <ol>
+        <li>작은 이미지를 클릭하면 큰 이미지가 나타납니다.</li>
+        <li>큰 이미지를 클릭하면 큰 이미지가 사라집니다.</li>
+    </ol>
+    <div id="gallery">
+        <ul>
+            <li>
+                <img src="images/spring-s.jpg" id="small1">
+                <img src="images/spring.jpg" id="big1" class="bigPic" width="800" height="530" alt="">
+            </li>
+            <li>
+                <img src="images/summer-s.jpg" id="small2">
+                <img src="images/summer.JPG" id="big2" class="bigPic" width="800" height="530" alt="">
+            </li>
+            <li>
+                <img src="images/fall-s.jpg" id="small3">
+                <img src="images/fall.JPG" id="big3" class="bigPic" width="800" height="530" alt="">
+            </li>
+            <li>
+                <img src="images/winter-s.jpg" id="small4">
+                <img src="images/winter.JPG" class="bigPic" width="800" height="530" alt="">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
