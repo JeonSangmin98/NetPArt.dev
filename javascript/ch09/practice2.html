@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        table{border: 1px solid black; border-collapse: collapse;}
+        #act>ol>li{line-height: 1.5em;}
+        nav>ul>li{list-style: none; display: inline;}
+    </style>
+    <script>
+        $(function(){
+            $(".menu").hide();
+
+            $("#home").click(function(){
+                $(".menu>#home").show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>String</h1>
+    <div class="tbl">
+        <nav>
+            <ul>
+                <li id="home">홈</li>
+                <li id="intro">String 소개</li>
+                <li id="act">String의 활동</li>
+                <li id="plan">올해 활동계획</li>
+            </ul>
+        </nav>
+        <section class="menu">
+            <div id="home">
+                <h1>홈</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam officia esse libero voluptate atque debitis neque sed, delectus rem fugit facilis excepturi asperiores voluptatibus optio qui, architecto nemo placeat sit?</p>
+            </div>
+            <div id="intro">
+                <h1>String 소개</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo praesentium harum dignissimos hic sed animi voluptates, sapiente rerum, accusantium ipsa, alias assumenda nemo eos esse eaque commodi cupiditate. Ad, quae!</p>
+            </div>
+            <div id="act">
+                <h1>String의 활동</h1>
+                <ol>
+                    <li><b>String 정기 연주회</b>
+                        <ul>
+                            <li>1년 동안 갈고 닦은 연주회</li>
+                            <li>20명이 함께 하는 기타 합주</li>
+                            <li>신입생부터 졸업생까지 함께 참가하는 연주회</li>
+                        </ul>
+                    </li>
+                    <li><b>알차게 배우는 기초 레슨</b>
+                        <ul>    
+                            <li>기타를 처음 접하는 신입생들을 위한 레슨</li>
+                            <li>매주 1회, 2시간씩</li>
+                            <li>연주회에도 참여할 수 있습니다.</li>
+                        </ul>
+                    </li>
+                    <li><b>선후배 간의 친목 도모</b>
+                        <ul>
+                            <li>함께하는 동아리 생활</li>
+                            <li>봄가을 MT</li>
+                            <li>여름, 겨울 방학 동안의 수련회</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div id="plan">
+                <h1>올해 활동 계획</h1>
+                <table border="1" width="600px">
+                    <caption>String 올해 활동 계획</caption>
+                    <tr>
+                        <th width="100px">3월</th>
+                        <td>AA</td>
+                    </tr>
+                    <tr>
+                        <th>4월</th>
+                        <td>BB</td>
+                    </tr>
+                    <tr>
+                        <th>5월</th>
+                        <td>CC</td>
+                    </tr>
+                    <tr>
+                        <th>6월</th>
+                        <td>DD</td>
+                    </tr>
+                    <tr>
+                        <th>7월</th>
+                        <td>EE</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <footer>
+            <p>아무시 아무동 111-11번지 우리대학교 학생회관 420호 <b>전화</b>: 246-2220(교) 3420<br></p>
+            <p><b><i>관리자</i>:stringAdmin@uri.ac.kr</b></p>
+        </footer>
+    </div>
+</body>
+</html>

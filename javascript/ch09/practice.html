@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
+    <script>
+        $(function(){
+            $("#gallery").bxSlider({
+                auto : true,
+                autoControls : false,
+                captions : true,
+                mode : 'fade',
+                slideWidth : 600
+            });
+
+            $("#link").click(function(){
+                $(location).attr("href", "practice2.html");
+            });
+        });
+    </script>
+    <style>
+        *{margin: 0 auto; padding: 0;}
+        li{list-style: none;}
+        #container{margin: 0 auto; width: 450px;}
+        p{width: 600px;}
+        span{font-weight: bold; font-size: 1.2em;}
+        #btn{text-align: center;}
+        #link{padding: 10px; border: 2px solid black; border-radius: 8px; background-color: rgb(36, 75, 191); color: white;}
+        #link:hover{background-color: rgb(74, 108, 187); cursor: pointer;}
+    </style>
+</head>
+<body>
+    <h1>String</h1>
+    <div class="container">
+        <div id="txt">
+            <ul id="gallery">
+                <li><img src="images/things-1.jpeg" alt="사진1" title="첫번째 그림의 캡션"></li>
+                <li><img src="images/things-2.jpeg" alt="사진2"></li>
+                <li><img src="images/things-3.jpeg" alt="사진3"></li>
+                <li><img src="images/things-4.jpeg" alt="사진4"></li>
+            </ul>
+            <p><span>신입생을 모집합니다.</span><br><br>
+                String은 신입생들 뿐만 아니라 재학생들에게도 활짝 열려 있습니다. 기타를 못치셔도 동아리의 강습을 통해
+                기초부터 배울 수 있습니다. 또한 선배들로부터 대학생활에 대한 많은 조언도 들을 수 있을 것입니다. 언제나 환영합니다.
+            </p>
+            <div id="btn">
+                <button id="link">노크하세요</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
