@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding School</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
+    <style>
+        *{margin: 0 auto; padding: 0;}
+        #menu{
+            background-color: darkblue;
+            height: 60px;
+            text-align: center; 
+        }
+        #menu ul li{
+            list-style: none;
+            line-height: 60px;
+            vertical-align: middle;
+            margin: 30px; 
+            color: white;
+            padding-top: 20px;
+            display: inline; 
+        }
+        #menu .mlink{
+            text-decoration: none;
+            color: white;
+        }
+        #gallery{
+            width: 80%;
+        }
+        nav{
+            margin-bottom: 20px;
+        }
+        section{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+        #content2{
+            background-color: rgb(204, 208, 236);
+            height: 250px;
+            padding: 5%;
+        }
+        #content2 img{float: right; margin-right: 10%;}
+        #content2 p {
+            /* border: 1px solid black; */
+            margin: 80px;
+            width: 60%;
+            text-align: left;
+            line-height: 25px;
+        }
+        #content3{padding: 8%;}
+        #content3 p{line-height: 2em;}
+        #content3>p>i{color: orange;}
+        #content3 span{color: gray;}
+    </style>
+    <script>
+        $(function(){
+            $(".slide_gallery").bxSlider({
+                auto : true,
+                autoControls : false
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="#" class="mlink">처음으로</a></li>
+            <li><a href="#" class="mlink">코딩이란</a></li>
+            <li><a href="#" class="mlink">왜 코딩 교육인가</a></li>
+            <li><a href="#" class="mlink">교육 프로그램</a></li>
+        </ul>
+    </nav>
+    <section id="content1">
+        <div id="gallery">
+            <ul class="slide_gallery">
+                <li><img src="images/coding1.jpg" alt="사진1"></li>
+                <li><img src="images/coding2.jpg" alt="사진2"></li>
+                <li><img src="images/coding3.jpg" alt="사진3"></li>
+            </ul>
+        </div>
+    </section>
+    <section id="content2">
+        <h1>왜 코딩 교육인가</h1>
+        <img src="images/code.png" alt="코드" id="code" width="180px" height="200px">
+        <p>코딩교육은 앞으로 미래 사회를 살아가는데 있어서 IT분야에서 일하는 사람들
+            뿐만 아니라 일반인에게도 꼭 필요하나 공부입니다. 프로그램을 다룰 수 있는 코딩 언어를
+            알고 있다면 평소 자신이 생각했던 프로그램을 스스로 개발해서 실생활에 활용할 수 있습니다.
+        </p>
+    </section>
+    <section id="content3">
+        <p><i>"코딩은 사고의 범위를 넓혀주고, 더 나은 생각을 할 수 있게 만들며,<br>
+        분야에 상관없이 모든 문제에 대해 새로운 해결책을 생각할 수 있는 힘을 길러주는 것"<br>
+        <span>-빌 게이츠-</span></i></p>
+    </section>
+    <section id="content4">
+        <h1>교육 프로그램</h1>
+    </section>
+</body>
+</html>

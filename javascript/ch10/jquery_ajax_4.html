@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS 연동</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            // 동일 출처 원칙에 따라 RSS를 불러오지 못하고 오류가 발생
+            $.ajax({
+                url : "http://myhome.chosun.com/rss/www_section_rss.xml",
+                dataType : "xml",
+                success : function(data){
+                    console.log(data);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>
