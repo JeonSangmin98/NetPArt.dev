@@ -1,4 +1,5 @@
 INDEX VERSION 1.131+/Users/netpart/Desktop/Dev/Jsp/.metadata/.plugins/org.eclipse.jdt.core
+<<<<<<< HEAD
 32713146.index
 2919161683.index
 3220812362.index
@@ -37,3 +38,9 @@ INDEX VERSION 1.131+/Users/netpart/Desktop/Dev/Jsp/.metadata/.plugins/org.eclips
 3324495182.index
 3400734031.index
 655120461.index
+=======
+456635189.index
+1865797976.index
+1309621784.index
+303025881.index
+>>>>>>> main

@@ -1,12 +1,15 @@
 INDEX VERSION 1.131
 /Users/netpart/Desktop/Dev/Jsp/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1527338703.index
 /WebMarket/src/main/java
+<<<<<<< HEAD
 /Users/netpart/Desktop/Dev/Jsp/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/748902294.index
 /JSPTest/src/main/java
 /Users/netpart/Desktop/Dev/Jsp/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2999435829.index
 /JSPTest/src/main/java
 /Users/netpart/Desktop/Dev/Jsp/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1444351506.index
 /JSPTest/src/main/java
+=======
+>>>>>>> main
 /Users/netpart/Desktop/Dev/Jsp/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1537500928.index
 /JSPTest/src/main/java
 /Users/netpart/Desktop/Dev/Jsp/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4103425846.index
