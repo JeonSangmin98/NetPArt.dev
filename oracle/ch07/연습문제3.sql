@@ -11,6 +11,15 @@ select E.employee_id, concat(E.first_name,E.last_name) as name,E.phone_number,ro
         inner join hr.employees E
             on H.employee_id = E.employee_id
     where E.employee_id = 114;
+-- 풀이
+select E.employee_id, E.first_name || E.last_name as name, phone_number ,
+    round((JH.end_date - JH.start_date)/365,1) as "Career Period", job_title
+    from employees E
+        inner join job_history JH
+            on E.employee_id = JH.employee_id
+        inner join jobs J
+            on JH.job_id = J.job_id
+    where E.employee_id = 114;
     
 -- HR스키마를 사용하여 부서별 급여 순위를 구하는 쿼리문 
 select J.job_id, rank() over(partition by J.job_id order by E.salary desc ) as 순위 ,E.first_name, E.salary
