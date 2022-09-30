@@ -12,7 +12,7 @@
 		아이디:
 		<%=request.getParameter("id")%></p>
 	<%
-	String name = request.getParameter("name");
+		String name = request.getParameter("name");
 	%>
 	<p>
 		이름:
