@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="MEMBERTBL" directorySegmentName="seg_0" id="5A47FAE8-A410-367A-DAF2-34E4FEE29B60">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>00C2065E-AF39-50DB-3745-B8609D56E1FC</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B354FA28-C90E-5A62-022A-D434F68656E4</segment>
+<tableSpace>91414045-F999-E414-DEA1-90585DDEC8E4</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="MEMBERADDRESS" id="389D87BC-F1F5-DC8E-7547-1295360AF601">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MEMBERNAME" id="8A284F7C-3592-F181-11B5-89D9F4539383">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MEMBERID" id="A8679B76-D0D5-AB0E-AB66-0180E9DDDFFC">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="MEMBERTBL_PK" id="AAE52CA9-5B92-1989-8703-1F177BA7F068">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>00C2065E-AF39-50DB-3745-B8609D56E1FC</schemaObject>
+<segment>03BC7083-2EE7-3901-D5D5-1D5DAE9302C9</segment>
+<tableSpace>91414045-F999-E414-DEA1-90585DDEC8E4</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="MEMBERTBL_PK" id="21A0654D-2857-FD00-BCD6-6656AA2F5EE1">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<segment>03BC7083-2EE7-3901-D5D5-1D5DAE9302C9</segment>
+<tableSpace>91414045-F999-E414-DEA1-90585DDEC8E4</tableSpace>
+<existingIndex>AAE52CA9-5B92-1989-8703-1F177BA7F068</existingIndex>
+<indexSegment>03BC7083-2EE7-3901-D5D5-1D5DAE9302C9</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

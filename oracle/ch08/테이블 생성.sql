@@ -81,3 +81,73 @@ commit;
 
 select * from userTBL;
 select * from buyTBL;
+
+
+select * from user_constraints where table_name = 'USERTBL' and constraint_type ='P';
+-- primary key 등록
+alter table userTBL add constraint PK_userTBL primary key(userId);
+desc userTBL;
+-- foreign key 등록
+alter table buyTBL 
+    add constraint FK_userTBL_buyTBL foreign key(userId) references userTBL(userId);
+    
+delete from buyTBL where userId ='BBK';
+
+alter table buyTBL add constraint PK_buyTBL primary key(idNum);
+
+select * from user_constraints where table_name = 'BUYTBL';
+
+-- foreign key 비활성
+alter table buyTBL
+    disable constraint FK_userTBL_buyTBL;
+    
+insert into buyTBL values(idSEQ.NEXTVAL,'BBK','모니터','전자',200,5);
+insert into buyTBL values(idSEQ.NEXTVAL,'KBS','청바지','의류',50,3);
+insert into buyTBL values(idSEQ.NEXTVAL,'BBK','메모리','전자',80,10);
+insert into buyTBL values(idSEQ.NEXTVAL,'SSK','책','서적',15,5);
+insert into buyTBL values(idSEQ.NEXTVAL,'EJW','책','서적',15,2);
+insert into buyTBL values(idSEQ.NEXTVAL,'EJW','청바지','의류',50,1);
+insert into buyTBL values(idSEQ.NEXTVAL,'BBK','운동화',NULL,30,2);
+insert into buyTBL values(idSEQ.NEXTVAL,'EJW','책','서적',15,1);
+insert into buyTBL values(idSEQ.NEXTVAL,'BBK','운동화',NULL,30,2);
+
+alter table buyTBL
+    -- 외래키를 다시 활성화 시키지만 기존에 입력되어 있는 데이터는 체크하지 않고 이후에 입력되는 데이터만 체크한다
+    enable novalidate constraint FK_userTBL_buyTBL;
+
+select * from buyTBL;
+
+-- check 제약 조건
+alter table userTBL
+    add constraint CK_birthYear
+    check (birthYear >= 1900 and birthYear <= 2017)
+    enable novalidate;  -- 기존에 입력된 데이터가 check 제약 조건에 맞지 않을 경우 무시하고 넘어간다.
+    
+insert into userTBL values('SSK','성시경',1979,'서울',NULL,NULL,186,'2013-12-12');
+insert into userTBL values('LBJ','임재범',1963,'서울','016','66666666',182,'2009-9-9');
+insert into userTBL values('YJS','윤종신',1969,'경남',NULL,NULL,170,'2005-5-5');
+insert into userTBL values('EJW','은지원',1972,'경북','011','88888888',174,'2014-3-3');
+insert into userTBL values('JKW','조관우',1965,'경기','018','99999999',172,'2010-10-10');
+insert into userTBL values('BBK','바비킴',1973,'서울','010','00000000',176,'2013-5-5');
+select * from userTBL;
+
+delete from userTBL where userId = 'BBK';   -- 외래키 테이블에 참조하고 있어서 삭제 안됨
+
+-- 외래키 삭제
+alter table buyTBL drop constraint FK_userTBL_buyTBL;
+
+alter table buyTBL 
+    add constraint FK_userTBL_buyTBL 
+    foreign key(userId) 
+    references userTBL(userId)
+    on delete cascade;
+    
+select * from userTBL;
+select * from buyTBL;
+
+delete from userTBL where userId = 'BBK';   -- 관련 데이터 다 같이 삭제(회원 탈퇴하면 구매기록도 같이 삭제)
+
+select * from user_constraints where table_name = 'USERTBL';
+
+-- check 제약 조건이 걸린 birthYear 삭제
+alter table userTBL drop column birthYear;

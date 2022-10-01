@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5A47FAE8-A410-367A-DAF2-34E4FEE29B60" schemaObject="00C2065E-AF39-50DB-3745-B8609D56E1FC" name="MEMBERTBL">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>MEMBERTBL</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>D9DC1AE6-B8C6-0C75-65CC-B3AF08D812FF</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MEMBERID" id="A8679B76-D0D5-AB0E-AB66-0180E9DDDFFC">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>MEMBERTBL</sourceObjSchema>
+<sourceObjName>MEMBERID</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>B763F6F6-ADEE-56DF-601B-7885E29D8E3F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBERNAME" id="8A284F7C-3592-F181-11B5-89D9F4539383">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>MEMBERTBL</sourceObjSchema>
+<sourceObjName>MEMBERNAME</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>B03721BF-4208-9E7E-FE92-FDCAC96854E7</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBERADDRESS" id="389D87BC-F1F5-DC8E-7547-1295360AF601">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>MEMBERTBL</sourceObjSchema>
+<sourceObjName>MEMBERADDRESS</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>2D6BCCD5-FC69-71C0-AE99-D35BE7905C60</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="21A0654D-2857-FD00-BCD6-6656AA2F5EE1" name="MEMBERTBL_PK">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>MEMBERTBL_PK</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>8C8B5D3E-6670-0DCA-F110-EA71684FF1B0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8679B76-D0D5-AB0E-AB66-0180E9DDDFFC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AAE52CA9-5B92-1989-8703-1F177BA7F068" schemaObject="00C2065E-AF39-50DB-3745-B8609D56E1FC" name="MEMBERTBL_PK">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>MEMBERTBL_PK</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>DA70D8A3-6E68-B8C2-8DB4-96C419F8BC6F</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8679B76-D0D5-AB0E-AB66-0180E9DDDFFC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

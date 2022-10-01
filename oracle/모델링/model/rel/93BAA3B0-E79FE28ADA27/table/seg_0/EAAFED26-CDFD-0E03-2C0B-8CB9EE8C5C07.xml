@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EAAFED26-CDFD-0E03-2C0B-8CB9EE8C5C07" schemaObject="00C2065E-AF39-50DB-3745-B8609D56E1FC" name="INDEXTBL">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>INDEXTBL</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>A5F75B2C-93A3-255E-7686-156EF673E9B1</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FIRST_NAME" id="F395AB63-7556-1FB2-B0BC-EDA8A6861665">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>INDEXTBL</sourceObjSchema>
+<sourceObjName>FIRST_NAME</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>A8172101-A7AB-982D-61A2-EF3DCE5DFF96</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_NAME" id="16A7AB84-54B1-F34D-FA7E-4B7A15B947B1">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>INDEXTBL</sourceObjSchema>
+<sourceObjName>LAST_NAME</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>722E16E1-70E9-83A2-2E2E-759D4706736D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HIRE_DATE" id="5F86004B-A302-4836-D835-24DF0E20B9FB">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>INDEXTBL</sourceObjSchema>
+<sourceObjName>HIRE_DATE</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>0CD22B80-DB03-0016-9F35-F53AEF495C6F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="26BA017D-601C-4760-44BC-6B5A53C3C6B3" schemaObject="00C2065E-AF39-50DB-3745-B8609D56E1FC" name="IDX_INDEXTBL_FIRSTNAME">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>IDX_INDEXTBL_FIRSTNAME</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:04:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>EE85E509-5294-749F-470E-E3DE5C27E7F7</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F395AB63-7556-1FB2-B0BC-EDA8A6861665"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

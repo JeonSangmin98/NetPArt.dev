@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4B5945F7-E770-938B-CA9E-A5B96515F689" containerWithKeyObject="6F82D5B6-52FF-8E15-6511-AC0357F53437" localFKIndex="4867CF0A-907B-686A-5937-7C6F47973637" name="buyTBL_userTBL_FK">
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 07:56:35 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<referredTableLongName>userTBL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>66258BC4-AB79-275A-20E8-511D0CC1CD42</referredTableID>
+<keyObject>57D0A53B-E079-A238-2033-B8F5A751F8F4</keyObject>
+<referredKeyID>57D0A53B-E079-A238-2033-B8F5A751F8F4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>userName</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<discriminatorColumn>CB5A734E-7CD8-BEAD-C64C-145D389C7EF3</discriminatorColumn>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

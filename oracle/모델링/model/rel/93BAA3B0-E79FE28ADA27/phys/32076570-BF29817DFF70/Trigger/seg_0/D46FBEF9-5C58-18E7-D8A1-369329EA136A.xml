@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_DELETEDMEMBERTBL" directorySegmentName="seg_0" id="D46FBEF9-5C58-18E7-D8A1-369329EA136A">
+<sourceConnName>로컬-SHOP</sourceConnName>
+<sourceObjSchema>SHOP</sourceObjSchema>
+<sourceObjName>TRG_DELETEDMEMBERTBL</sourceObjName>
+<createdBy>netpart</createdBy>
+<createdTime>2022-09-27 08:03:32 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<actions>DELETE</actions>
+<body><![CDATA[begin
+    insert into deletedMemberTBL
+        values(:old.memberID, :old.memberName, :old.memberAddress, sysdate());
+end;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>B19374D7-7015-DAC5-0B35-1171D9F1E3D8</owner>
+<table>5A47FAE8-A410-367A-DAF2-34E4FEE29B60</table>
+</TriggerOraclev10g>

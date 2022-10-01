@@ -30,10 +30,18 @@ select * from employees;
 
 -- sqlDB의 구매테이블(buyTBL)에서 다음과 같이 출력
 select * from buyTBL;
-select userId as "사용자 ID", sum(amount) as "총 구매 개수" from buyTBL group by userID;
+select userId as "사용자 ID", sum(amount) as "총 구매 개수" 
+    from buyTBL 
+    group by userID 
+    order by userId desc;
 
 -- sqlDB의 구매테이블(byTBL)에서 다음과 같이 평균 구매 개수가 2 이상인 사용자만 출력
-select userId as "사용자 ID", avg(amount) as "평균 구매 개수" from buyTBL group by userID having avg(amount)>=2;
+-- 띄어 쓰기 없으면 as 생략 가능 
+select userId 사용자ID, avg(amount) 평균구매개수 
+    from buyTBL 
+    group by userID 
+    having avg(amount) >= 2
+    order by avg(amount) desc;
 
 -- sqlDB의 구매 테이블(buyTBL)에서 다음과 같이 분류별로 개수에 대한 소합계를 출력
 select idNum, groupName, sum(amount) as "개수" from buyTBL group by rollup(groupName,idNum);
