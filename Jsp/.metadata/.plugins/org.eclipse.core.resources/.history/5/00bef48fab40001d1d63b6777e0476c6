@@ -1,0 +1,17 @@
+package dto;
+
+import java.io.Serializable;
+
+public class Product implements Serializable{	// Serializable : 운영체제가 다를때 대비
+	private static final long serialVersionUID = 5172686590827527119L;	
+	
+	private String productId;
+	private String pname;
+	private Integer unitPrice;
+	private String description;
+	private String manufacturer;
+	private String category;
+	private long unitsInStock;
+	private String condition;
+	
+}// end Product

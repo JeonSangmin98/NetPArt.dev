@@ -1,0 +1,7 @@
+package dto;
+
+import java.io.Serializable;
+
+public class Product implements Serializable{	// Serializable : 운영체제가 다를때 대
+	
+}
