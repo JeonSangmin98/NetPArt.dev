@@ -2,8 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Product"%>
-<jsp:useBean id="productDAO" class="dao.ProductRepository"
-	scope="session" />
+<%@ page import="dao.ProductRepository" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,11 +15,12 @@
 	<jsp:include page="menu.jsp" />
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">상품 목록</h1>
+			<h1 class="display-4">상품 목록</h1>
 		</div>
 	</div>
 	<%
-	ArrayList<Product> listOfProduct = productDAO.getAllProducts();
+	ProductRepository dao = ProductRepository.getInstance();
+	ArrayList<Product> listOfProduct = dao.getAllProducts();
 	%>
 	<div class="container">
 		<!-- Gridlayout 처럼 씀, 12칼럼을 4로 나누어서 사용 -->

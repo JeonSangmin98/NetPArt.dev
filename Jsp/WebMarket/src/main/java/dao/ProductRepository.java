@@ -5,6 +5,11 @@ import dto.Product;
 
 public class ProductRepository {
 	private ArrayList<Product> listOfProduct = new ArrayList<Product>(); // 객체 생성
+	private static ProductRepository instance = new ProductRepository();
+
+	public static ProductRepository getInstance() {
+		return instance;
+	}
 
 	public ProductRepository() {
 		Product phone = new Product("P1234", "iPhone 6s", 800000);
@@ -42,13 +47,15 @@ public class ProductRepository {
 
 		for (int i = 0; i < listOfProduct.size(); i++) {
 			Product product = listOfProduct.get(i);
-			if (product != null && product.getProductId() != null 
-					&& product.getProductId().equals(productId)) {
+			if (product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
 				productById = product;
 			}
 		}
-		
+
 		return productById;
 	}// end getProductById
-
+	
+	public void addProduct(Product product) {
+		listOfProduct.add(product);
+	}// end addProduct
 }// end ProductRepository
