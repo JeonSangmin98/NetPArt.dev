@@ -1,10 +1,7 @@
 package mms.member.ui;
 
 import java.util.Scanner;
-
-import mms.member.action.Action;
-import mms.member.action.MemberAddAction;
-import mms.member.action.MemberListAction;
+import mms.member.action.*;
 import mms.member.controller.MemberController;
 
 public class MemberUI {
@@ -28,6 +25,12 @@ public class MemberUI {
 				break;
 			case 2:
 				action = new MemberListAction();
+				break;
+			case 3:
+				action = new MemberModifyAction();
+				break;
+			case 4:
+				action = new MemberRemoveAction();
 				break;
 			case 5:
 				System.out.println("프로그램 종료");

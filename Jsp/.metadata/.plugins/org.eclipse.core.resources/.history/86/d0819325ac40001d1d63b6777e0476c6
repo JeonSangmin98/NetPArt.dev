@@ -1,8 +1,0 @@
-package dao;
-
-import java.util.ArrayList;
-import dto.Product;
-
-public class ProductRepository {
-	private ArrayList<Product> listOfProduct = new ArrayList<Product>();
-}

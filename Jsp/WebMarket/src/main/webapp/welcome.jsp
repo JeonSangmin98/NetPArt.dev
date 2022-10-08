@@ -7,8 +7,7 @@
 <html>
 <head>
 <title>Welcome</title>
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 </head>
 <body>
 	<%@ include file="menu.jsp" %>

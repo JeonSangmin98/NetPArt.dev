@@ -9,7 +9,7 @@ import mms.member.vo.Member;
 public class MemberAddAction implements Action {
 
 	@Override
-	public void execut(Scanner sc) throws Exception {
+	public void execute(Scanner sc) throws Exception {
 		ConsoleUtil cu = new ConsoleUtil();
 		Member newMember = cu.getNewMember(sc);
 		MemberAddService memberAddService = new MemberAddService();
@@ -20,5 +20,4 @@ public class MemberAddAction implements Action {
 			cu.printAddFailMessage(newMember);
 		}
 	}
-
 }

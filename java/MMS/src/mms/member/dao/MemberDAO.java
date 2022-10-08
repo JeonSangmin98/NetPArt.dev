@@ -1,6 +1,7 @@
 package mms.member.dao;
 
 import static mms.member.db.JdbcUtil.close;
+import static mms.member.db.JdbcUtil.commit;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -58,8 +59,8 @@ public class MemberDAO {
 			memberList = new ArrayList<Member>();
 			while (rs.next()) {
 				// DB에서 읽어온 값
-				Member member = new Member(rs.getInt("id"), rs.getString("name"), rs.getString("addr"), rs.getString("nation"),
-						rs.getString("email"), rs.getInt("age"));
+				Member member = new Member(rs.getInt("id"), rs.getString("name"), rs.getString("addr"),
+						rs.getString("nation"), rs.getString("email"), rs.getInt("age"));
 				memberList.add(member);
 			}
 		} catch (SQLException e) {
@@ -70,4 +71,71 @@ public class MemberDAO {
 		}
 		return memberList;
 	}// end selectMemberList
+	
+	public Member selectOldMember(String name) {
+		Member oldMember = null;
+		PreparedStatement pstmt = null;
+		String sql = "select * from member where name = ?";
+		ResultSet rs = null;
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, name);
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				oldMember = new Member(rs.getInt("id"), rs.getString("name"), rs.getString("addr"),
+						rs.getString("nation"), rs.getString("email"), rs.getInt("age"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		return oldMember;
+	}// selectOldMember
+	
+	public int updateMember(Member updateMember) {
+		int updateCount = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = "update member set addr = ?, nation = ?, email = ?, age = ? where name = ?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, updateMember.getAddr());
+			pstmt.setString(2, updateMember.getNation());
+			pstmt.setString(3, updateMember.getEmail());
+			pstmt.setInt(4, updateMember.getAge());
+			pstmt.setString(5, updateMember.getName());
+			
+			updateCount = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return updateCount;
+	}// updateMember
+	
+	public int deleteMember(String name) {
+		int deleteCount = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = "delete member where name = ?";
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, name);
+			
+			deleteCount = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return deleteCount;
+	}
 }// end MemberDAO

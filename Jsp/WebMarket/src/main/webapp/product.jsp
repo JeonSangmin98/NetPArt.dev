@@ -7,8 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 상세 정보</title>
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
@@ -24,6 +23,9 @@
 	%>
 	<div class="container">
 		<div class="row">
+			<div class="col-md-5">
+				<img src="/upload/<%= product.getFilename() %>" style="width:100%">
+			</div>
 			<div class="col-md-6">	<!-- 한줄에 12칸 그리드 -->
 				<h3><%=product.getPname()%></h3>
 				<!-- 상품이름 -->

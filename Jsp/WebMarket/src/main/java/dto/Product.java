@@ -13,6 +13,7 @@ public class Product implements Serializable{	// Serializable : 운영체제가 
 	private String category;
 	private long unitsInStock;
 	private String condition;
+	private String filename;
 	
 	public Product() {
 		super();
@@ -87,6 +88,14 @@ public class Product implements Serializable{	// Serializable : 운영체제가 
 
 	public void setCondition(String condition) {
 		this.condition = condition;
+	}
+
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 	
 }// end Product

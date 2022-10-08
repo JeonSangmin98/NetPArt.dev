@@ -8,8 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상품목록</title>
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
@@ -30,6 +29,7 @@
 				Product product = listOfProduct.get(i);
 			%>
 			<div class="col-md-4">
+				<img src="/upload/<%= product.getFilename() %>" style="width:100%">
 				<!-- 태그와 자바코드 분리해서 사용 -->
 				<h3><%=product.getPname()%></h3>
 				<p><%=product.getDescription()%>

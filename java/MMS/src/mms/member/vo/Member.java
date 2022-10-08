@@ -8,7 +8,16 @@ public class Member {
 	private String nation;
 	private String email;
 	private int age;
-
+	
+	public Member(String name, String addr, String nation, String email, int age) {
+			super();
+			this.name = name;
+			this.addr = addr;
+			this.nation = nation;
+			this.email = email;
+			this.age = age;
+	}
+	
 	public Member(int id, String name, String addr, String nation, String email, int age) {
 		super();
 		this.id = id;
@@ -19,14 +28,6 @@ public class Member {
 		this.age = age;
 	}
 
-	public Member(String name, String addr, String nation, String email, int age) {
-		super();
-		this.name = name;
-		this.addr = addr;
-		this.nation = nation;
-		this.email = email;
-		this.age = age;
-	}
 
 	public int getId() {
 		return id;

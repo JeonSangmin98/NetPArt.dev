@@ -6,7 +6,7 @@ import mms.member.action.Action;
 public class MemberController {
 	public void processRequest(Action action, Scanner sc) {
 		try {
-			action.execut(sc);
+			action.execute(sc);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
