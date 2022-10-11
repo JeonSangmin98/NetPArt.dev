@@ -1,0 +1,6 @@
+/**
+ * 
+ */
+ function checkAddProduct(){
+	var productId = document.getElementById();	
+}

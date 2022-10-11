@@ -33,8 +33,6 @@
 				placeholder="가입인사를 입력해주세요"></textarea>
 		<p><input type="submit" value="가입하기">
 			<input type="reset" value="다시쓰기">
-			
-		
 	</form>
 </body>
 </html>

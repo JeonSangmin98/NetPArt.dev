@@ -32,23 +32,25 @@
 			return false;
 		}
 		
-		/* 숫자 여부 */
+		
 		for(i = 0; i<form.id.value.length; i++){
 			var ch = form.id.value.charAt(i);
 			
 			if(!(ch>='a' && ch<='z')){
 				alert("아이디는 영문 소문자만 입력 가능합니다.");
 				form.id.select();
-				return;
+				return false;
 			}
 		}
-		if(isNan(form.passwd.value)){
-			alert("비밀 번호는 숫자만 입력 가능합니다.");
+		/* 숫자 여부 */
+		if (isNaN(form.passwd.value)) {
+			alert("비밀번호는 숫자만 입력 가능합니다!");
 			form.passwd.select();
-			return;
+			return false;
 		}
+		
 		form.submit();
-	}
+	}//checkForm
 </script>
 </head>
 <body>

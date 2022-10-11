@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<error-code>500</error-code>
+	<location>./ch09/errorCode_error.jsp</location>
+</web-app>
