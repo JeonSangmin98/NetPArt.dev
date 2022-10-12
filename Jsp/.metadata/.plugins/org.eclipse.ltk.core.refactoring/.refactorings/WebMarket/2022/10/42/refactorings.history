@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;exceptionNoProductId.jsp&apos; to &apos;exceptionNoProductId.jsp&apos;&#x0A;- Original project: &apos;WebMarket&apos;&#x0A;- Destination element: &apos;exceptionNoProductId.jsp&apos;&#x0A;- Original element: &apos;exceptionNoProductId.jsp&apos;" description="Copy file" element1="src/main/webapp/exceptionNoProductId.jsp" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1665562813335" target="/WebMarket/src/main/webapp/exceptionNoProductId.jsp" units="0" version="1.0"/>
+</session>

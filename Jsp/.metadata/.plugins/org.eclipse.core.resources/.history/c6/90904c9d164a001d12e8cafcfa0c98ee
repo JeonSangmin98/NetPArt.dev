@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<filter>
+		<filter-name>Filter01</filter-name>
+		<filter-class>ch12.com.filter.AuthenFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<url-pattern>/ch10/filter01_process.jsp</url-pattern>
+	</filter-mapping>
+	<!-- 둘중 하나 쓰면 됨 -->
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/ch09/exceptionType_error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/ch09/errorCode_error.jsp</location>
+	</error-page>
+</web-app>
