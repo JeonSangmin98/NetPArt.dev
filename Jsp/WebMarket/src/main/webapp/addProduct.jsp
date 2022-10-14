@@ -17,7 +17,7 @@
 	</div>
 	
 	<div class="container">
-		<form action="./processAddProduct.jsp" name="newProduct" method="post" 
+		<form name="newProduct" action="./processAddProduct.jsp" method="post" 
 					class="form-horizontal" enctype="multipart/form-data">
 			<div class="form-group row">
 				<label class="col-sm-2">상품코드</label>
