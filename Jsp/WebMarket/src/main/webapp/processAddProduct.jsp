@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="dto.Product"%>
-<%@ page import="dao.ProductRepository"%>
 <%@ page import="com.oreilly.servlet.*"%>
 <%@ page import="com.oreilly.servlet.multipart.*"%>
 <%@ page import="java.util.*"%>
+<%@ include file="dbconn.jsp" %>
+
 <%
 request.setCharacterEncoding("UTF-8");
 
@@ -36,20 +36,24 @@ Enumeration files = multi.getFileNames();
 String fname = (String) files.nextElement();
 String filename = multi.getFilesystemName(fname);
 
-ProductRepository dao = ProductRepository.getInstance();
-Product newProduct = new Product();
+PreparedStatement pstmt = null;
+String sql = "insert into product values(?,?,?,?,?,?,?,?,?)";
+pstmt = con.prepareStatement(sql);
+pstmt.setString(1, productId);
+pstmt.setString(2, name);
+pstmt.setInt(3, price);
+pstmt.setString(4, description);
+pstmt.setString(5, category);
+pstmt.setString(6, manufacturer);
+pstmt.setLong(7, stock);
+pstmt.setString(8, condition);
+pstmt.setString(9, filename);
+pstmt.executeUpdate();
 
-newProduct.setProductId(productId);
-newProduct.setPname(name);
-newProduct.setUnitPrice(price);
-newProduct.setDescription(description);
-newProduct.setManufacturer(manufacturer);
-newProduct.setCategory(category);
-newProduct.setUnitsInStock(stock);
-newProduct.setCondition(condition);
-newProduct.setFilename(filename);
-
-dao.addProduct(newProduct);
+if (pstmt != null)
+	pstmt.close();
+if (con != null)
+	con.close();
 
 response.sendRedirect("products.jsp");
 %>

@@ -43,3 +43,23 @@
 	</div>
 </body>
 </html>
+<%
+session.invalidate();
+for (int i = 0; i < cookies.length; i++){
+	Cookie thisCookie = cookies[i];
+	String n = thisCookie.getName();
+	if(n.equals("Shipping_cartId"))
+		thisCookie.setMaxAge(0);
+	if(n.equals("Shipping_name"))
+		thisCookie.setMaxAge(0);
+	if(n.equals("Shipping_shippingDate"))
+		thisCookie.setMaxAge(0);
+	if(n.equals("Shipping_country"))
+		thisCookie.setMaxAge(0);
+	if(n.equals("Shipping_zipCode"))
+		thisCookie.setMaxAge(0);
+	if(n.equals("Shipping_addressName"))
+		thisCookie.setMaxAge(0);
+	response.addCookie(thisCookie);
+}
+%>

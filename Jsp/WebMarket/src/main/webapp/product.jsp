@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="dto.Product"%>
 <%@ page import="dao.ProductRepository"%>
+<%@ page import="java.sql.*"%>
 <%@ page errorPage="exceptionNoProductId.jsp"%>
 <!DOCTYPE html>
 <html>
@@ -26,41 +27,56 @@
 			<h1 class="display-4">상품 정보</h1>
 		</div>
 	</div>
-	
-	<%
-	String id = request.getParameter("id");
-	ProductRepository dao = ProductRepository.getInstance();
-	Product product = dao.getProductById(id);
-	%>
 	<div class="container">
 		<div class="row">
+			<%@ include file="dbconn.jsp"%>
+			<%
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+
+			String sql = "select * from product";
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+			%>
 			<div class="col-md-5">
-				<img src="/upload/<%=product.getFilename()%>" style="width: 100%">
+				<img src="/upload/<%=rs.getString("p_fileName")%>"
+					style="width: 100%">
 			</div>
 			<div class="col-md-6">
 				<!-- 한줄에 12칸 그리드 -->
-				<h3><%=product.getPname()%></h3>
+				<h3><%=rs.getString("p_name")%></h3>
 				<!-- 상품이름 -->
-				<p><%=product.getDescription()%>
+				<p><%=rs.getString("p_description")%>
 				<p>
-					<b>상품 코드 : </b><span class="badge badge-danger"><%=product.getProductId()%></span>
+					<b>상품 코드 : </b><span class="badge badge-danger"><%=rs.getString("p_id")%></span>
 				<p>
 					<b>제조사</b> :
-					<%=product.getManufacturer()%>
+					<%=rs.getString("p_manufacturer")%>
 				<p>
 					<b>분류</b> :
-					<%=product.getCategory()%>
+					<%=rs.getString("p_category")%>
 				<p>
 					<b>재고 수</b> :
-					<%=product.getUnitsInStock()%>
-				<h4><%=product.getUnitPrice()%>원
+					<%=rs.getString("p_unitsInStock")%>
+				<h4><%=rs.getString("p_unitPrice")%>원
 				</h4>
 				<p>
-				<form name="addForm" action="./addCart.jsp?id=<%=product.getProductId()%>" method="post">
+				<form name="addForm" action="./addCart.jsp?id=<%=rs.getString("p_id")%>" method="post">
 					<a href="#" class="btn btn-info" onclick="addToCart()">상품주문&raquo;</a>
-					<a href="./cart.jsp" class="btn btn-warning">장바구니&raquo;</a>
-					<a href="./products.jsp" class="btn btn-secondary">상품 목록&raquo;</a>
+					<a href="./cart.jsp" class="btn btn-warning">장바구니&raquo;</a> <a
+						href="./products.jsp" class="btn btn-secondary">상품 목록&raquo;</a>
 				</form>
+				<%
+				}
+				if (rs != null)
+				rs.close();
+				if (con != null)
+				con.close();
+				if (pstmt != null)
+				pstmt.close();
+				%>
 			</div>
 		</div>
 	</div>
