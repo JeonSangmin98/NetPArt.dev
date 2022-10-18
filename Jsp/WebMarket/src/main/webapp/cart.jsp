@@ -1,3 +1,5 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
@@ -20,13 +22,17 @@ String cartId = session.getId();
 		</div>
 	</div>
 
+	<%@ include file="dbconn.jsp"%>
+
 	<div class="container">
 		<div class="row">
 			<table width="100%">
 				<tr>
 					<td align="left"><a href="./deleteCart.jsp?cartId=<%=cartId%>"
 						class="btn btn-danger">삭제하기</a></td>
-					<td align="right"><a href="./shippingInfo.jsp?cartId=<%=cartId%>" class="btn btn-success">주문하기</a></td>
+					<td align="right"><a
+						href="./shippingInfo.jsp?cartId=<%=cartId%>"
+						class="btn btn-success">주문하기</a></td>
 				</tr>
 			</table>
 		</div>
@@ -48,6 +54,16 @@ String cartId = session.getId();
 				for (Product product : list) {
 					total = product.getUnitPrice() * product.getQuantity();
 					sum += total;
+					/* PreparedStatement pstmt = null;
+					ResultSet rs = null;
+					String sql = "select * from product where p_id=?";
+					pstmt = con.prepareStatement(sql);
+					pstmt.setString(1, productId);
+					rs = pstmt.executeQuery();
+					if(rs.next()){
+						int id = rs.getInt("id");
+						String pw = rs.getString("passwd");
+						String name = rs.getString("name"); */
 				%>
 				<tr>
 					<td><%=product.getProductId()%> - <%=product.getPname()%>
@@ -64,7 +80,7 @@ String cartId = session.getId();
 					<th></th>
 					<th></th>
 					<th>총액</th>
-					<th><%=sum %></th>
+					<th><%=sum%></th>
 					<th></th>
 				</tr>
 			</table>

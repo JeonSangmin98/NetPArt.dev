@@ -31,14 +31,16 @@
 		<div class="row">
 			<%@ include file="dbconn.jsp"%>
 			<%
+			String _id = request.getParameter("id");
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
 
-			String sql = "select * from product";
+			String sql = "select * from product where p_id=?";
 			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, _id);
 			rs = pstmt.executeQuery();
 
-			while (rs.next()) {
+			if (rs.next()) {
 			%>
 			<div class="col-md-5">
 				<img src="/upload/<%=rs.getString("p_fileName")%>"

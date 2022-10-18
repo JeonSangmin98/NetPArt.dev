@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>상품목록</title>
+<title>상품 목록</title>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 </head>
 <body>
