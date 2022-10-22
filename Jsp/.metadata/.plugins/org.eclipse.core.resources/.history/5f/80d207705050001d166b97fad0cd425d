@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>myController</servlet-name>
+		<servlet-class>ch16.com.controller.ControllerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		
+	</servlet-mapping>
+	<filter>
+		<filter-name>Filter01</filter-name>
+		<filter-class>ch12.com.filter.AuthenFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filter01</filter-name>
+		<url-pattern>/ch10/filter01_process.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>Filter02</filter-name>
+		<filter-class>ch12.com.filter.InitParamFilter</filter-class>
+		<init-param>
+			<param-name>param1</param-name>
+			<param-value>admin</param-value>
+		</init-param>
+		<init-param>
+			<param-name>param2</param-name>
+			<param-value>1234</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filter02</filter-name>
+		<url-pattern>/ch10/filter02_process.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>Filter02_2</filter-name>
+		<filter-class>ch12.com.filter.LogFileFilter</filter-class>
+		<init-param>
+			<param-name>filename</param-name>
+			<param-value>/Users/netpart/Desktop/Dev/Jsp/logs/monitor.log</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filter02_2</filter-name>
+		<url-pattern>/ch10/filter02_process.jsp</url-pattern>
+	</filter-mapping>
+	
+	<!-- 둘중 하나 쓰면 됨 -->
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/ch09/exceptionType_error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/ch09/errorCode_error.jsp</location>
+	</error-page>
+	
+	<!-- 연습문제 -->
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>practice_quiz.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/practice_quiz/quiz7/login_success.jsp</url-pattern>
+	</filter-mapping>
+</web-app>

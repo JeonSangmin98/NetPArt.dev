@@ -29,7 +29,7 @@ public class ProductRepository {
 		notebook.setFilename("P1235.png");
 		
 		Product tablet = new Product("P1236", "Galaxy Tab S", 900000);
-		tablet.setDescription("212.8*125.6*6.6mm, Super AMOLED display, " + "Octa-Core processor");
+		tablet.setDescription("10.5-inch, 212.8*125.6*6.6mm, Super AMOLED display, " + "Octa-Core processor");
 		tablet.setCategory("Tablet");
 		tablet.setManufacturer("Samsung");
 		tablet.setUnitsInStock(1000);

@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="com.oreilly.servlet.*"%>
+<%@ page import="com.oreilly.servlet.multipart.*"%>
+<%@ page import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ include file="dbconn.jsp" %>
+
+<%
+request.setCharacterEncoding("UTF-8");
+
+MultipartRequest multi = new MultipartRequest(request, "/Users/netpart/Desktop/Dev/Jsp/upload", 5 * 1024 * 1024,
+		"UTF-8", new DefaultFileRenamePolicy());
+
+String productId = multi.getParameter("productId");
+String name = multi.getParameter("name");
+String unitPrice = multi.getParameter("unitPrice");
+String description = multi.getParameter("description");
+String manufacturer = multi.getParameter("manufacturer");
+String category = multi.getParameter("category");
+String unitsInStock = multi.getParameter("unitsInStock");
+String condition = multi.getParameter("condition");
+
+Integer price;
+if (unitPrice.isEmpty())
+	price = 0;
+else
+	price = Integer.valueOf(unitPrice);
+
+long stock;
+if (unitsInStock.isEmpty())
+	stock = 0;
+else
+	stock = Long.valueOf(unitsInStock);
+
+Enumeration files = multi.getFileNames();
+String fname = (String) files.nextElement();
+String filename = multi.getFilesystemName(fname);
+
+%>
+<sql:update var="resultSet" dataSource="${dataSource}">
+		insert into product values(?,?,?,?,?,?,?,?,?)
+	<sql:param value="${param.id}" />
+	<sql:param value="${param.password}" />
+	<sql:param value="${param.name}" />
+	<sql:param value="${param.gender}" />
+	<sql:param value="${birth}" />
+	<sql:param value="${mail}" />
+	<sql:param value="${param.phone}" />
+	<sql:param value="${param.address}" />
+	<sql:param value="${timestamp}" />
+</sql:update>
+<c:if test="${resultSet>=1}">
+	<c:redirect url="resultMember.jsp?msg=1" />
+</c:if>
+<%
+PreparedStatement pstmt = null;
+String sql = "insert into product values(?,?,?,?,?,?,?,?,?)";
+pstmt = con.prepareStatement(sql);
+pstmt.setString(1, productId);
+pstmt.setString(2, name);
+pstmt.setInt(3, price);
+pstmt.setString(4, description);
+pstmt.setString(5, category);
+pstmt.setString(6, manufacturer);
+pstmt.setLong(7, stock);
+pstmt.setString(8, condition);
+pstmt.setString(9, filename);
+pstmt.executeUpdate();
+
+if (pstmt != null)
+	pstmt.close();
+if (con != null)
+	con.close();
+
+response.sendRedirect("products.jsp");
+%>

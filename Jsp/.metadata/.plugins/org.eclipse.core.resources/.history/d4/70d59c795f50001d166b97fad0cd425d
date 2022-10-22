@@ -1,0 +1,11 @@
+create table borad(
+	num number not null,
+	id varchar2(10) not null,
+	name nvarchar2(10) not null,
+	subject nvarchar2(100) not null,
+	content nvarchar2(500) not null,
+	regist_day nvarchar2(30),
+	hit number,
+	ip nvarchar2(20),
+	primary key(num)
+);

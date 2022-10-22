@@ -1,0 +1,29 @@
+create table member(
+	id number not null,
+	name varchar2(100) not null,
+	passwd varchar2(100) not null,
+	primary key(id)
+);
+
+-- table 조회
+select * from user_objects where object_type='TABLE';
+select * from user_tables;
+select * from tabs;
+
+-- table 상세 정보 조회
+select * from col where tname='STUDENT';
+select * from cols where table_name='MEMBER';
+
+-- table 정보 변경
+-- 정보 추가
+alter table member add phone varchar2(100);
+-- 정보 삭제
+alter table member drop column phone;
+-- 열이름 수정
+alter table member rename column passwd to password;
+-- 자료형 수정
+alter table member modify password varchar2(60);
+-- table 이름 수정
+alter table member rename to student;
+
+insert into student values(1, '홍길동', '1234');

@@ -1,0 +1,10 @@
+create table student(
+	num number not null,
+	depart nvarchar2(40),
+	name nvarchar2(60) not null,
+	address nvarchar2(100),
+	phone nvarchar2(40),
+	primary key (num)
+);
+
+select * from student;

@@ -11,11 +11,13 @@
 </head>
 <body>
 	<%@ include file="menu.jsp" %>
-	<%!String greeting = "웹 쇼핑몰에 오신 것을 환영합니다!";
-	String tagline = "Welcome to Web Market";%>
+	<%!
+	String greeting = "웹 쇼핑몰에 오신 것을 환영합니다!";
+	String tagline = "Welcome to Web Market";
+	%>
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3"><%=greeting%></h1>
+			<h1 class="display-3" align="center"><%=greeting%></h1>
 		</div>
 	</div>
 	<div class="container">
@@ -30,6 +32,7 @@
 			%>
 		</div>
 	</div>
+	<br>
 	<%@ include file="footer.jsp" %>
 </body>
 </html>

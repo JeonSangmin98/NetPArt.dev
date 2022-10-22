@@ -5,15 +5,16 @@ import java.io.Serializable;
 public class Product implements Serializable{	// Serializable : 운영체제가 다를때 대비
 	private static final long serialVersionUID = 5172686590827527119L;	
 	
-	private String productId;
-	private String pname;
-	private Integer unitPrice;
-	private String description;
-	private String manufacturer;
-	private String category;
-	private long unitsInStock;
-	private String condition;
-	private String filename;
+	private String productId;	// 상품아이디
+	private String pname;		// 상품명
+	private Integer unitPrice;	// 상품가격
+	private String description;	// 상품설명
+	private String manufacturer;// 제조사
+	private String category;	// 분류
+	private long unitsInStock;	// 재고수
+	private String condition;	// 신상품, 중고품, 재생품
+	private String filename;	// 이미지 파일명
+	private int quantity;		// 장바구니 담은 개수
 	
 	public Product() {
 		super();
@@ -96,6 +97,14 @@ public class Product implements Serializable{	// Serializable : 운영체제가 
 
 	public void setFilename(String filename) {
 		this.filename = filename;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 	
 }// end Product

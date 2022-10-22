@@ -19,5 +19,7 @@
 		<p><%=request.getRequestURL()%>
 		<p><a href="./products.jsp" class="btn btn-secondary">상품 목록&raquo;</a>
 	</div>
+	<br>
+	<jsp:include page="/footer.jsp" />
 </body>
 </html>

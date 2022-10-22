@@ -1,0 +1,20 @@
+create table student(
+	num number not null,
+	depart nvarchar2(40),
+	name nvarchar2(60) not null,
+	address nvarchar2(100),
+	phone nvarchar2(40),
+	primary key (num)
+);
+
+select * from STUDENT;
+select * from col where tname='STUDENT';
+
+insert into STUDENT values(2018100001,'모바일과','홍길순','서울시','010-9002-1234');
+insert into STUDENT values(2018100002,'모바일과','홍길동','경기도','010-2009-4321');
+insert into STUDENT values(2018200001,'영어과','수여인','인천시','010-3918-0007');
+insert into STUDENT values(2018200002,'영어과','김다운','서울시','010-3002-0101');
+
+select * from STUDENT where depart='모바일과';
+
+update STUDENT set depart='컴퓨터과' where depart='모바일과';

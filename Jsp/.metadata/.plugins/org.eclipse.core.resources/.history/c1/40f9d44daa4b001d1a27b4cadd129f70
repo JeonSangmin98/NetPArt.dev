@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배송 정보</title>
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
+</head>
+<body>
+	<jsp:include page="menu.jsp" />
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-4">배송 정보</h1>
+		</div>
+	</div>
+	
+	<div class="container">
+		<form action="./processShippingInfo.jsp" class="form-horizontal"
+			method="post">
+			<input type="hidden" name="cartId" value="<%=request.getParameter("cartId")">	
+		</form>
+	</div>
+	
+	<hr>
+	<jsp:include page="footer.jsp" />
+</body>
+</html>

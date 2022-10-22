@@ -1,0 +1,53 @@
+package mvc.controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class BoardController
+ */
+public class BoardController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    static final int LIST_COUNT=5;
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public BoardController() {
+        super();
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		전체 경로 /WebMarket/BoardListAction.do
+		String requestURI = request.getRequestURI();
+		
+//		프로젝트 이름 /WebMarket
+		String contextPath = request.getContextPath();
+		
+//		전체 경로에서 /BoardListAction.do 읽어오기
+		String command = requestURI.substring(contextPath.length());
+		
+		if(command.equals("/BoardListAction.do")) {
+			requestBoardList(request);
+		}
+	}//doPost
+	
+//	등록된 글 목록 가져오기
+	private void requestBoardList(HttpServletRequest request) {
+		
+	}
+
+}// end class

@@ -1,0 +1,11 @@
+package mvc.model;
+
+public class BoardDAO {
+	private static BoardDAO instance;
+	
+	public BoardDAO() {}
+	public static BoardDAO getInstance() {
+			instance = new BoardDAO();
+		return instance;
+	}
+}// end class

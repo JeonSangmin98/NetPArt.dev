@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+request.setCharacterEncoding("UTF-8");
+String cartId = session.getId();
+
+String shipping_cartId = "";
+String shipping_name = "";
+String shipping_shippingDate = "";
+String shipping_country = "";
+String shipping_zipCode = "";
+String shipping_addressName = "";
+
+Cookie[] cookies = request.getCookies();
+
+if (cookies != null) {
+	for (Cookie thiscookie : cookies) {
+		String n = thisCookie.getName();
+	}
+}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주문 정보</title>
+</head>
+<body>
+
+</body>
+</html>

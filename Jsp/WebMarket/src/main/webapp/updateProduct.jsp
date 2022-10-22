@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ include file="dbconn.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +9,15 @@
 <title>상품 수정</title>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 <script type="text/javascript" src="./resources/js/validation.js"></script>
+
+<%-- <c:set var="sessionId" value="${sessionScope.sessionId}" />
+<sql:query var="resultSet" dataSource="${dataSource}">
+	select * from product where id=?
+	<sql:param value="${sessionId}" />
+</sql:query> --%>
+
 </head>
-<body>
+<body onload="init()">
 	<jsp:include page="menu.jsp" />
 	<div class="jumbotron">
 		<div class="container">
@@ -16,7 +25,6 @@
 		</div>
 	</div>
 
-	<%@ include file="dbconn.jsp"%>
 	<%
 	String productId = request.getParameter("id");
 	PreparedStatement pstmt = null;
@@ -27,6 +35,7 @@
 	rs = pstmt.executeQuery();
 	if (rs.next()) {
 	%>
+	<%-- <c:forEach var="row" items="${resultSet.rows}"> --%>
 	<div class="container">
 		<div class="row" align="center">
 			<div class="col-md-5">
@@ -88,9 +97,10 @@
 					<div class="form-group row">
 						<label class="col-sm-2">상태</label>
 						<div class="col-sm-5">
-							<input type="radio" name="condition" value="New"> 신규 제품 <input
-								type="radio" name="condition" value="Old"> 중고 제품 <input
-								type="radio" name="condition" value="Refurbished"> 재생 제품
+							<c:set var="condition" value="${row.p_condition}"/>
+							<input type="radio" name="condition" class="New" value="New" <c:if test="${condition.equlas('New')}">checked</c:if>> 신규 제품 
+							<input type="radio" name="condition" class="Old" value="Old" <c:if test="${condition.equlas('Old')}">checked</c:if>> 중고 제품 
+							<input type="radio" name="condition" class="Refurbished" value="Refurbished" <c:if test="${condition.equlas('Refurbished')}">checked</c:if>> 재생 제품
 						</div>
 					</div>
 					<div class="form-group row">
@@ -109,6 +119,26 @@
 			</div>
 		</div>
 	</div>
+	<%-- </c:forEach>
+	<script>
+	function init() {
+		setComboConditionValue("${p_condition}");
+	}
+	function setComboConditionValue(val) {
+		var selectCondition = document.getElementById("condition");
+		for(var i = 0; i < selectCondition.length; i++){
+			if(selectCondition.options[i].value == val){
+				selectCondition.options[i].selected = true;
+				break;
+			}
+		}
+	} 
+	/* $(function setComboConditionValue(val) {
+		if($(".New").is(":checked")){break;}
+		else if($(".Old").is(":checked")){break;}
+		else if($(".Refurbished").is(":checked")){break;}
+	}); */
+	</script> --%>
 	<%
 	}
 	if (rs != null)
@@ -118,6 +148,7 @@
 	if (pstmt != null)
 	pstmt.close();
 	%>
+	<br>
 	<jsp:include page="footer.jsp" />
 </body>
 </html>

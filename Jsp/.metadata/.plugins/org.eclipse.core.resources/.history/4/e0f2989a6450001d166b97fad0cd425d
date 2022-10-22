@@ -1,0 +1,39 @@
+package mvc.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+public class BoardDAO {
+	private static BoardDAO instance;
+
+	public BoardDAO() {
+	}
+
+	public static BoardDAO getInstance() {
+		if (instance == null)
+			instance = new BoardDAO();
+
+		return instance;
+	}
+
+	public int getListCount(String items, String text) { // 검색 관련(제목,이름)
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		int x = 0;
+		String sql;
+		if (items == null && text == null) {
+			sql = "select count(*) from board";
+		} else {
+			sql = "select count(*) from board where "+items+" like '%" + text + "%'";
+		}
+
+		return x;
+	}// getListCount
+
+	public ArrayList<BoardDAO> getBoardList(int page, int limit, String items, String text) {
+
+	}
+}// end class

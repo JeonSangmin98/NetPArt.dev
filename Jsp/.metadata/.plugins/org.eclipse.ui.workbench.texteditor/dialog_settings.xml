@@ -8,6 +8,7 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value="Request"/>
 		<list key="findhistory">
+			<item value="&#x09;&#x09;&#x09;&lt;h2 class=&quot;alert alert-danger&quot;&gt;요청하신 페이지를 찾을 수 없습니다.&lt;/h2&gt;"/>
 			<item value="request"/>
 			<item value="&lt;%"/>
 		</list>

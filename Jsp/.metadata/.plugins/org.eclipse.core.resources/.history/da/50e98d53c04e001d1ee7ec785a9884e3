@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ include file="dbconn.jsp"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+	request.setCharacterEncoding("UTF-8");
+
+	String id = request.getParameter("id");
+	int _id = Integer.parseInt(id);
+	String passwd = request.getParameter("passwd");
+	String name = request.getParameter("name");
+	%>
+</body>
+</html>

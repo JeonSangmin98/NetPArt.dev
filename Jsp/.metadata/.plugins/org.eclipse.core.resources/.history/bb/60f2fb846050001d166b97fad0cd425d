@@ -1,0 +1,11 @@
+package mvc.database;
+
+import java.sql.Connection;
+
+public class DBConnection {
+	public static Connection getConnection() {
+		Connection conn = null;
+		String user = "shop";
+		String password = "1234";
+	}
+}

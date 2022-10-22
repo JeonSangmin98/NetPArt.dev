@@ -20,5 +20,7 @@
 		<p>
 			<a href="./products.jsp" class="btn btn-secondary">&laquo;상품 목록</a>
 	</div>
+	<br>
+	<jsp:include page="/footer.jsp" />
 </body>
 </html>

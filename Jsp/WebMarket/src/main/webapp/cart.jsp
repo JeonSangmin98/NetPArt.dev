@@ -87,7 +87,7 @@ String cartId = session.getId();
 			<a href="./products.jsp" class="btn btn-secondary">&laquo;쇼핑계속하기</a>
 		</div>
 	</div>
-
+	
 	<hr>
 	<jsp:include page="footer.jsp" />
 </body>

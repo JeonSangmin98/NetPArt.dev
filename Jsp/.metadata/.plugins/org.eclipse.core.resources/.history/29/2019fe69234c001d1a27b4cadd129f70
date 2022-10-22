@@ -1,0 +1,14 @@
+create table member(
+	id number not null,
+	name varchar2(100) not null,
+	passwd varchar2(100) not null,
+	primary key(id)
+);
+
+-- table 조회
+select * from user_objects where object_type='TABLE';
+select * from user_tables;
+select * from tabs;
+
+select * from col where tname='MEMBER';
+select * from cols where table_name='MEMBER';
