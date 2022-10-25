@@ -10,7 +10,11 @@
     <fullyQualifiedTypeName name="org.springframework.test.context.ContextConfiguration"/>
     <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j"/>
     <fullyQualifiedTypeName name="com.spring.sample.Restaurant"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="lombok.extern.java.Log"/>
     <fullyQualifiedTypeName name="org.apache.commons.logging.Log"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
 </qualifiedTypeNameHistroy>
