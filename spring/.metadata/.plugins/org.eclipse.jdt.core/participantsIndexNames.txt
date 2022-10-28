@@ -5,5 +5,9 @@ INDEX VERSION 1.131
 /ex01/src/main/java
 /Users/netpart/Desktop/Dev/spring/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1170294029.index
 /test/src/main/java
+/Users/netpart/Desktop/Dev/spring/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2189512632.index
+/ex02/src/main/java
+/Users/netpart/Desktop/Dev/spring/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2312218099.index
+/ex02/src/main/java
 /Users/netpart/Desktop/Dev/spring/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2436582989.index
 /ex01/src/main/java
