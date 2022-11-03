@@ -27,13 +27,21 @@ public class BoardControllerTests {
 	
 	@Before
 	public void setup() {
-		mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
-	}
+		this.mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
+	}//setup
 	
 	@Test
 	public void testList() throws Exception {
 		log.info(mockMvc.perform(MockMvcRequestBuilders.get("/board/list")).andReturn().getModelAndView().getModelMap());
-	}
+	}//testList
+	
+	@Test
+	public void testListPaging() throws Exception {
+		log.info(mockMvc.perform(MockMvcRequestBuilders.get("/board/list")
+				.param("pageNum", "3")
+				.param("amount", "10"))
+				.andReturn().getModelAndView().getModelMap());
+	}//testListPaging
 	
 	@Test
 	public void testRegister() throws Exception {
@@ -47,5 +55,37 @@ public class BoardControllerTests {
 				.getViewName();
 		
 		log.info("---------- resultPage : " + resultPage);
-	}
-}
+	}//testRegister
+	
+	@Test
+	public void testGet() throws Exception {
+		log.info(mockMvc.perform(MockMvcRequestBuilders.get("/board/get")
+				.param("bno", "3"))
+				.andReturn().getModelAndView().getModelMap());
+	}//testGet
+	
+	@Test
+	public void testModify() throws Exception {
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/modify")
+				.param("bno", "3")
+				.param("title", "수정된 테스트 새글 목록")
+				.param("content", "수정된 테스트 새글 내용")
+				.param("writer", "user00")
+				)
+				.andReturn()
+				.getModelAndView()
+				.getViewName();
+		
+		log.info("---------- resultPage : " + resultPage);
+	}//testModify
+	
+	@Test
+	public void testRemove() throws Exception {
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/remove")
+				.param("bno", "3"))
+				.andReturn()
+				.getModelAndView()
+				.getViewName();
+		log.info("---------- resultPage : " + resultPage);
+	}//testRemove
+}//BoardControllerTests

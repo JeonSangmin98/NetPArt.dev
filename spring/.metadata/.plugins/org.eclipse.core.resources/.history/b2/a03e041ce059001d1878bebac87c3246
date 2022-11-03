@@ -1,0 +1,5 @@
+package com.webmarket.mapper;
+
+public interface BoardMapper {
+
+}

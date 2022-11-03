@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.spring.domain.BoardVO;
+import com.spring.domain.Criteria;
 
 import lombok.extern.log4j.Log4j;
 
@@ -21,6 +22,21 @@ public class BoardMapperTests {
 	public void testGetBoard() {
 		log.info("--------------------");
 		mapper.getList();
+	}
+	
+	@Test
+	public void testPaging() {
+		log.info("--------------------");
+		mapper.getListWithPaging(new Criteria(3,10));
+	}
+	
+	@Test
+	public void testSearch() {
+		log.info("--------------------");
+		Criteria cri = new Criteria();
+		cri.setKeyword("test");
+		cri.setType("TC");
+		mapper.getListWithPaging(cri);
 	}
 	
 	@Test

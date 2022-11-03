@@ -1,0 +1,14 @@
+console.log("Reply Module...");
+var replyService = (function(){
+
+	function add(reply,callback){
+		console.log("add reply ... ");
+		$.ajax({
+			type:'post',
+			url:'replies/new',
+			data:JSON.stringify(reply)
+		});
+	}/add
+
+	return {add : add};
+})();

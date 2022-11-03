@@ -1,0 +1,16 @@
+package com.webmarket.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.webmarket.domain.ProductVO;
+
+
+public interface ProductService {
+	public void register(ProductVO product);
+	public ProductVO get(int p_id);
+	public int modify(ProductVO vo);
+	public int remove(int p_id);
+	public List<ProductVO> getList();
+}

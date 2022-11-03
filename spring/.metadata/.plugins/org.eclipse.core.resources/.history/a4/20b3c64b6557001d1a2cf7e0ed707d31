@@ -1,0 +1,5 @@
+package com.webmarket.service;
+
+public interface ProductService {
+
+}
