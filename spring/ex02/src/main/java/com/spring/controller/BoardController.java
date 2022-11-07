@@ -26,12 +26,11 @@ public class BoardController {
 	@GetMapping("/list")
 	public void list(Criteria cri, Model model) {
 		log.info("list----------");
-		log.info("cri : " + cri);
+		log.info("cri:"+cri);
 		int total = service.getTotal(cri);
-		model.addAttribute("list",service.getList(cri));
+		model.addAttribute("list", service.getList(cri));
 		model.addAttribute("pageMaker", new PageDTO(cri, total));
-	}//list
-	
+	}
 	@GetMapping("/register")
 	public void register() {
 		
@@ -39,36 +38,33 @@ public class BoardController {
 	
 	@PostMapping("/register")
 	public String register(BoardVO board, RedirectAttributes rttr) {
-		log.info("register : " + board);
+		log.info("register:" + board);
 		
 		service.register(board);
 		rttr.addFlashAttribute("result", board.getBno());
 		
 		return "redirect:/board/list";
-	}//register
-	
-	@GetMapping({"/get","/modify"})
-	public void get(Long bno, @ModelAttribute("cri")Criteria cri, Model model) {
-		log.info("get or modify");
+	}
+	@GetMapping({"/get", "/modify"})
+	public void get(Long bno, @ModelAttribute("cri")Criteria cri, Model model) { 
+		log.info("get or modify ");
 		model.addAttribute("board", service.get(bno));
-	}//get
-	
+	}
 	@PostMapping("/modify")
 	public String modify(BoardVO board, @ModelAttribute("cri")Criteria cri, RedirectAttributes rttr) {
-		log.info("modify : " + board);
+		log.info("modify:" + board);
 		if(service.modify(board) == 1) {
-			rttr.addFlashAttribute("result", "success");	// addFlashAttribute 한번만 보내고 주소창에 남지 않음
+			rttr.addFlashAttribute("result", "success");
 		}
-//		rttr.addAttribute("pageNum", cri.getPageNum());	// addAttribute는 주소창에 남음
+//		rttr.addAttribute("pageNum", cri.getPageNum());
 //		rttr.addAttribute("amount", cri.getAmount());
 //		rttr.addAttribute("type", cri.getType());
 //		rttr.addAttribute("keyword", cri.getKeyword());
-		return "redirect:/board/list" + cri.getListLink();
-	}//modify
-	
+		return "redirect:/board/list"+cri.getListLink();
+	}
 	@PostMapping("/remove")
-	public String remove(Long bno, @ModelAttribute("cri")Criteria cri, RedirectAttributes rttr) {
-		log.info("remove : " + bno);
+	public String Remove(Long bno, @ModelAttribute("cri")Criteria cri, RedirectAttributes rttr) {
+		log.info("remove:" + bno);
 		if(service.remove(bno) == 1) {
 			rttr.addFlashAttribute("result", "success");
 		}
@@ -76,6 +72,7 @@ public class BoardController {
 //		rttr.addAttribute("amount", cri.getAmount());
 //		rttr.addAttribute("type", cri.getType());
 //		rttr.addAttribute("keyword", cri.getKeyword());
-		return "redirect:/board/list" + cri.getListLink();
-	}//remove
+		return "redirect:/board/list"+cri.getListLink();
+	}
 }//BoardController
+

@@ -34,9 +34,9 @@
 					</thead>
 					<tbody>
 						<c:forEach items="${list}" var="board">
-							<tr class="odd gradeX">
+							<tr>
 								<td>${board.bno}</td>
-								<td><a class="move" href="${board.bno}">${board.title}</a></td>
+								<td><a class='move' href='${board.bno}'>${board.title}</a></td>
 								<td>${board.writer}</td>
 								<td><fmt:formatDate pattern="yyyy-MM-dd"
 										value="${board.regdate}" /></td>
@@ -44,12 +44,10 @@
 										value="${board.updateDate}" /></td>
 							</tr>
 						</c:forEach>
-
 					</tbody>
 				</table>
 				<!-- /.table-responsive -->
-				
-				<form action="/board/list" id="searchForm" method="get">
+				<form id="searchForm" action="/board/list" method="get">
 					<select name="type">
 						<option value="" ${pageMaker.cri.type==null?'selected':''}>---</option>
 						<option value="T" ${pageMaker.cri.type=='T'?'selected':''}>제목</option>
@@ -57,33 +55,35 @@
 						<option value="W" ${pageMaker.cri.type=='W'?'selected':''}>작성자</option>
 						<option value="TC" ${pageMaker.cri.type=='TC'?'selected':''}>제목+내용</option>
 						<option value="TCW" ${pageMaker.cri.type=='TCW'?'selected':''}>제목+내용+작성자</option>
-					</select>
-					<input type="text" name="keyword" value="${pageMaker.cri.keyword}">
-					<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
-					<input type="hidden" name="amount" value="${pageMaker.cri.amount}">		
-					<button class="btn btn-default">Search</button>	
-				</form>
-				
+					</select> 
+					<input type="text"	name="keyword" value='${pageMaker.cri.keyword}'>
+					<input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum }'>
+					<input type='hidden' name='amount' value='${pageMaker.cri.amount }'>
+					<button class="btn btn-default">Search</button>
+				</form>				
 				<div class="pull-right">
 					<ul class="pagination">
 						<c:if test="${pageMaker.prev}">
-							<li class="paginate_button previous"><a href="${pageMaker.startPage-1}">Previous</a></li>
+							<li class="paginate_button previous"><a
+								href="${pageMaker.startPage-1}">Previous</a></li>
 						</c:if>
 						<c:forEach var="num" begin="${pageMaker.startPage}"
 							end="${pageMaker.endPage}">
-							<li class="paginate_button ${pageMaker.cri.pageNum==num?'active':''}"><a
+							<li
+								class="paginate_button ${pageMaker.cri.pageNum==num?'active':''}"><a
 								href="${num}">${num}</a></li>
 						</c:forEach>
 						<c:if test="${pageMaker.next}">
-							<li class="paginate_button next"><a href="${pageMaker.endPage+1}">Next</a></li>
+							<li class="paginate_button next"><a
+								href="${pageMaker.endPage+1}">Next</a></li>
 						</c:if>
 					</ul>
 				</div>
-				<form action="/board/list" id="actionForm" method="get">
-					<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
-					<input type="hidden" name="amount" value="${pageMaker.cri.amount}">	
-					<input type="hidden" name="keyword" value="${pageMaker.cri.keyword}">
-					<input type="hidden" name="type" value="${pageMaker.cri.type}">				
+				<form id='actionForm' action='/board/list' method='get'>
+					<input type='hidden' name="pageNum" value='${pageMaker.cri.pageNum}'> 
+					<input type='hidden' name="amount" value='${pageMaker.cri.amount}'>
+					<input type="hidden" name="keyword" value='${pageMaker.cri.keyword}'>
+					<input type="hidden" name="type" value='${pageMaker.cri.type}'>
 				</form>
 			</div>
 			<!-- /.panel-body -->
@@ -92,6 +92,7 @@
 	</div>
 	<!-- /.col-lg-12 -->
 </div>
+
 <div class="modal fade in" id="myModal" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -110,18 +111,18 @@
 	</div>
 	<!-- /.modal-dialog -->
 </div>
+
 <script type="text/javascript">
 	$(function() {
 		var result = '${result}';
 
 		checkModal(result);
-
 		history.replaceState({}, null, null);
-
 		function checkModal(result) {
 			if (result === '' || history.state) {
 				return;
 			}
+
 			if (result === 'success') {
 				$(".modal-body").html("정상적으로 처리되었습니다.");
 			} else if (parseInt(result) > 0) {
@@ -134,23 +135,26 @@
 		$("#regBtn").click(function() {
 			self.location = "/board/register";
 		});
-		
-		var actionForm = $("#actionForm");		
-		$(".pagination a").on("click",function(e){
+
+		var actionForm = $('#actionForm');
+		$('.pagination a').on('click', function(e) {
 			e.preventDefault();
 			console.log("click");
-			actionForm.find("input[name='pageNum']").val($(this).attr("href"));
+			actionForm.find('input[name="pageNum"]').val($(this).attr('href'));
 			actionForm.submit();
 		});
+
+		$('.move').on(
+				'click',
+				function(e) {
+					e.preventDefault();
+					actionForm.append('<input type="hidden" name="bno" value="'
+							+ $(this).attr('href') + '">');
+					actionForm.attr("action", "/board/get");
+					actionForm.submit();
+				});
 		
-		$('.move').on('click',function(e){
-			e.preventDefault();
-			actionForm.append('<input type="hidden" name="bno" value="'+$(this).attr("href")+'">');
-			actionForm.attr('action','/board/get');
-			actionForm.submit();
-		});
-		
-		$("#searchForm button").on("click",function(e){
+		$("#searchForm button").on("click", function(e){
 			var searchForm = $("#searchForm");
 			if(!searchForm.find("option:selected").val()){
 				alert("검색 종류를 선택하세요.");
@@ -161,9 +165,9 @@
 				return false;
 			}
 			searchForm.find('input[name="pageNum"]').val('1');
-			e.preventdefault();
+			e.preventDefault();
 			searchForm.submit();
 		});
-	});
+	})//$(function() {
 </script>
 <%@ include file="../includes/footer.jsp"%>

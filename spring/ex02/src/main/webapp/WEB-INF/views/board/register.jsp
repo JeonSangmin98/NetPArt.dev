@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <%@ include file="../includes/header.jsp"%>
 <div class="row">
 	<div class="col-lg-12">
@@ -24,8 +25,8 @@
 					</div>
 					<div class="form-group">
 						<label>Writer</label> <input class="form-control" name="writer">
-					</div>
-					<button type="submit" class="btn btn-default">Submit Button</button>
+					</div>	
+					<button type="submit" class="btn btn-default">Submit Button</button>				
 					<button type="reset" class="btn btn-default">Reset Button</button>
 				</form>
 			</div>
@@ -35,4 +36,5 @@
 	</div>
 	<!-- /.col-lg-12 -->
 </div>
+
 <%@ include file="../includes/footer.jsp"%>

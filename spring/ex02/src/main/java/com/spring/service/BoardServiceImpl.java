@@ -13,7 +13,6 @@ import com.spring.mapper.BoardMapper;
 public class BoardServiceImpl implements BoardService{
 	@Autowired
 	private BoardMapper mapper;
-	
 	@Override
 	public void register(BoardVO vo) {
 		mapper.insertSelectKey(vo);
@@ -48,4 +47,5 @@ public class BoardServiceImpl implements BoardService{
 	public int getTotal(Criteria cri) {
 		return mapper.getTotalCount(cri);
 	}
+
 }
