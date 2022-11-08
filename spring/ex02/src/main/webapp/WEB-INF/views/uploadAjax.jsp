@@ -5,16 +5,60 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+.uploadResult {
+	width: 100%;
+	background-color: gray;
+}
+
+.uploadResult ul {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.uploadResult ul li {
+	list-style: none;
+	padding: 10px;
+}
+
+.uploadResult ul li img {
+	width: 100px
+}
+
+.bigPictureWrapper {
+	position: absolute;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	z-index: 100;
+}
+
+.bigPicture {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+</style>
 </head>
 <body>
 	<h1>Upload with Ajax</h1>
+	<div class="bigPictureWrapper">
+		<div class="bigPicture">
+		</div>
+	</div>
 	<div class="uploadDiv">
 		<input type="file" name="uploadFile" multiple>
 	</div>
 	<button id="uploadBtn">Upload</button>
 	<div class="uploadResult">
 		<ul>
-			
 		</ul>
 	</div>
 	<script src="/resources/vendor/jquery/jquery.min.js"></script>
@@ -34,15 +78,60 @@
 			}
 			return true;
 		}//checkExtension
+
+		function showImage(fileCallPath){
+			$(".bigPictureWrapper").css("display","flex").show();
+			$(".bigPicture")
+				.html("<img src='/display?fileName=" + fileCallPath + "'>")
+				.animate({witdh:'100%',height:'100%'},1000);
+		}//showImage
+		
+		$(".bigPictureWrapper").click(function(){
+			$(".bigPicture").animate({witdh:'0%',height:'0%'},1000, 
+				function(){
+					$(".bigPictureWrapper").hide();
+				}
+			);
+		});
 		
 		var uploadResult = $(".uploadResult ul");
-		function showUploadFile(uploadResultArr){
+		function showUploadFile(uploadResultArr) {
 			var str = "";
-			$(uploadResultArr).each(function(i,obj){
-				str += "<li>" + obj.fileName + "</li>";
-			});
+			$(uploadResultArr)
+					.each(function(i, obj) {
+								if (!obj.image) {
+									var fileCallPath = encodeURIComponent(obj.uploadPath + "/"+ obj.uuid + "_" + obj.fileName);
+									str += "<li><a href='/download?fileName="+ fileCallPath
+											+ "'><img src='/resources/img/attach.png'>"+ obj.fileName 
+											+ "<span data-file='"+fileCallPath +"' data-type='file'>X</span>" 
+											+ "</li>";
+								} else {
+									/* str += "<li>" + obj.fileName + "</li>"; */
+									var fileCallPath = encodeURIComponent(obj.uploadPath+ "/s_"+ obj.uuid+ "_"+ obj.fileName);
+									var originalPath = obj.uploadPath + "/" + obj.uuid + "_" + obj.fileName;
+									/* originalPath = originalPath.replace(new RegExp(/\\/g),"/"); */
+									str += '<li><a href="javascript:showImage(\''+ originalPath +'\')"><img src="/display?fileName='+ fileCallPath + '"></a>'
+											+ "<span data-file='"+fileCallPath +"' data-type='image'>X</span>" 
+											+'</li>';
+								}
+							});
 			uploadResult.append(str);
 		}//showUploadFile
+		
+		uploadResult.on("click","span",function(){
+			var targetFile = $(this).data("file");
+			var type = $(this).data("type");
+			console.log(targetFile);
+			$.ajax({
+				url:'/deleteFile',
+				data:{fileName:targetFile, type:type},
+				dataType:'text',
+				type:'post',
+				success:function(result){
+					alert(result);
+				}
+			});
+		});
 		
 		$(function() {
 			var cloneObj = $(".uploadDiv").clone();
@@ -60,7 +149,7 @@
 				}// end for
 
 				$.ajax({
-					url : 'uploadAjaxAction',
+					url : '/uploadAjaxAction',
 					processData : false,
 					contentType : false,
 					data : formData,
@@ -70,7 +159,7 @@
 						// alert("Uploaded");
 						console.log(result);
 						showUploadFile(result);
-						$(".uploadDiv").html(cloneObj.html());
+						$(".uploadDiv").html(cloneObj.html()); // input 버튼 초기화
 					}
 				}); // end $.ajax
 			});
